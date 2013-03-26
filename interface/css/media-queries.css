@@ -1,0 +1,98 @@
+.mobile-only{
+	display:none !important;
+}
+@media screen and (min-width:1024px){
+
+		
+}
+
+
+@media screen and (min-width:960px) and (max-width: 1024px){
+
+	
+}
+
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+
+
+}
+
+
+
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+@media screen and (max-width: 768px) {
+
+		
+
+}
+
+
+	
+/************************************************************************************
+smaller than 560
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+	#header .branding, #header .phone, #header .address{
+		width:95% !important;
+		text-align:center !important;
+		float:none !important;
+
+	}
+
+	#header ul.social_links{
+		text-align:center;
+		margin: auto;
+		margin-bottom: 20px;
+}
+	#page_slider.flexslider{display:none;}
+	
+#responsive-nav{
+display:block !important;
+}
+	.mobile-only{display:block !important;}
+	.not-mobile{display:none;}
+	
+	.full_horizontal{
+		display:none;
+	}
+
+#content_block .inner, footer#footer .inner {
+width: 94% !important;
+}
+.body_container{
+	width:95% !important;
+}
+
+.social_links{
+	margin-right:10px;
+}
+
+#header .social{
+	margin-bottom:20px !important;
+}
+footer#footer, footer#sub_footer, .one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth, #content_block.aside-right #primary_content, #content_block aside.aside-right, footer#footer, footer#sub_footer,
+.bread_crumbs {
+width: 95% !important;
+float: none !important;
+margin:auto !important;
+}
+
+h2.entry_title{
+font-size: 2.5em;
+font-weight: 200;
+color: black;
+line-height: 1.1em;
+margin-bottom:.5em;
+padding-top:20px !important;
+margin: auto;
+
+width: 95%;
+}
+
+}
+
