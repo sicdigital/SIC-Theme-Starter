@@ -55,6 +55,21 @@ require_once( SIC_Settings . '/theme_features.php');
 
 require_once( SIC_Settings . '/custom_post_types.php');
 
+add_image_size( 'post_featured', '796', '398', TRUE ); 
+
+function my_insert_custom_image_sizes( $sizes ) {
+  global $_wp_additional_image_sizes;
+  if ( empty($_wp_additional_image_sizes) )
+    return $sizes;
+
+  foreach ( $_wp_additional_image_sizes as $id => $data ) {
+    if ( !isset($sizes[$id]) )
+      $sizes[$id] = ucfirst( str_replace( '-', ' ', $id ) );
+  }
+
+  return $sizes;
+}
+add_filter( 'image_size_names_choose', 'my_insert_custom_image_sizes' );
 
 add_action( 'template_redirect', 'enqueue_scripts_styles');
 

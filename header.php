@@ -25,8 +25,8 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<?php wp_head();?>
-	</script>
-	
+	<script type="text/javascript"> (less = less || {}).env = 'development';</script>
+
 </head>
 
 

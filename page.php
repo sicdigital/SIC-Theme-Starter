@@ -13,7 +13,6 @@
 					
 					<?php while ( have_posts() ) : the_post(); ?>	
 			
-
 					<div class="entry_content">											
 
 						<?php the_content(); ?>		

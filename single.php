@@ -13,11 +13,12 @@ get_template_part( 'header' ); ?>
 						<section id="primary_content" class="hfeed">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								
+								<style type="text/css">
+
+								</style>
 								<header class="entry_header">
 									<h1 class="entry_title"><?php the_title(); ?></h1>
-									<?php sic_featured();?>
-									<div class="entry_meta">
+ 								<div class="entry_meta">
 										<?php
 											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>' ),
 												get_permalink(),
@@ -29,7 +30,9 @@ get_template_part( 'header' ); ?>
 											);
 										?>
 									</div><!-- .entry-meta -->
+
 								</header><!-- .entry-header -->
+								<div class="entry_image"><?php the_post_thumbnail( 'post_featured'); ?></div>
 
 								<div class="entry-content">
 									<?php the_content( __( 'Continue reading <span class="meta_nav">&rarr;</span>' ) ); ?>
