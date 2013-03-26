@@ -28,7 +28,7 @@
     
 	function add_new_section($sections){
 	
- 		//$sections = array(); 
+ 		$sections = array(); 
 
 	
 		$sections[] = array(
@@ -259,7 +259,7 @@ add_filter('redux-opts-args-sic_theme', 'change_theme_args');
 	 //$args['menu_icon'] = '';
 
 	 //Custom menu title for options page - default is "Options"
-	 $args['menu_title'] = __('SOBE Options', 'nhp-opts');
+	 $args['menu_title'] = __('Theme Options', 'nhp-opts');
 
 	 //Custom Page Title for options page - default is "Options"
 	 $args['page_title'] = __('Theme Options', 'nhp-opts');

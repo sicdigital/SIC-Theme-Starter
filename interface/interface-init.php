@@ -65,7 +65,7 @@ function enqueue_scripts_styles(){
 			
 	wp_enqueue_style("navigation", get_bloginfo('template_directory') . "/framework/css/navigation.css", "less_css", "1.0", "all");
 
-	wp_enqueue_style("typography", get_bloginfo('template_directory') . "/framework/css/typography.css", "less_css", "1.0", "all");
+	//wp_enqueue_style("typography", get_bloginfo('template_directory') . "/framework/css/typography.css", "less_css", "1.0", "all");
 
 	wp_enqueue_style("forms", get_bloginfo('template_directory') . "/framework/css/forms.css", "less_css", "1.0", "all");
 	
