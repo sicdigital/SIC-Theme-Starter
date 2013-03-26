@@ -5,14 +5,16 @@ If not loads the default, set in General Options, or theme default.
 
 if is a left sidebar, this needs to be output before the content. 
 */
+GLOBAL $sic_theme;
+$position = rwmb_meta('sic_page_layout');
 
-$position = rwmb_meta('page_layout');
-if($position == ""){$position = 'rsidebar';}
-
-$sidebar = rwmb_meta('page_sidebar');
+if($position == "default" || $position == ''){
+$position = $sic_theme->settings['pages']['layout'];
+}
+$sidebar = rwmb_meta('sic_page_sidebar');
 if($sidebar == ""){$sidebar = 'Default';}
-
 if( $position == 'rsidebar' ){ ?>
+
 	<aside id="aside_<?php echo $post->ID;?>" class="aside aside-right">
 		<div class="inner">
 		
@@ -30,13 +32,14 @@ if( $position == 'rsidebar' ){ ?>
 				 generated_dynamic_sidebar_webtreats(TRUE);
 			 
 			}
+
 			?>
 			
 		</div>
 	</aside>
 	
 <?php } 
-if( $position == 'lsidebar' ){ ?>
+if( $position == 'lsidebar'){?>
 
 	<aside id="aside_<?php echo $post->ID; ?>" class="aside aside-left">
 		<div class="inner">

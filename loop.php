@@ -8,8 +8,9 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<header class="entry_header">
-						<h3 class="entry_title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+						
 
+						<h3 class="entry_title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 						<div class="entry_meta">
 							<?php
 								printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'toolbox' ),

@@ -28,10 +28,9 @@ $sic_theme = new SicFramework('sic', array(
 		
 		'design' => array(
 			'background' => array( 
-				'type' => 'none',
-				'url' => 'http://dev.framework/wp-content/themes/sic_theme/framework/img/defaults/graffiti_bg.jpg'),
-			
-			'layout' => 'responsive'
+				'type' => 'css', //backstretch
+				'url' => 'http://dev.framework/wp-content/uploads/2013/03/she-hulk-3.jpg'),
+				'layout' => 'responsive'
 			),//design
 		
 
@@ -60,24 +59,15 @@ require_once( SIC_Settings . '/custom_post_types.php');
 add_action( 'template_redirect', 'enqueue_scripts_styles');
 
 function enqueue_scripts_styles(){
+if(!is_admin()){
+	wp_enqueue_script("jquery");
+}
 
 	wp_enqueue_style("reset", get_bloginfo('template_directory') . "/framework/css/reset.css", "", "", "all");
-			
-	wp_enqueue_style("navigation", get_bloginfo('template_directory') . "/framework/css/navigation.css", "less_css", "1.0", "all");
-
-	wp_enqueue_style("typography", get_bloginfo('template_directory') . "/framework/css/typography.css", "less_css", "1.0", "all");
-
-	wp_enqueue_style("forms", get_bloginfo('template_directory') . "/framework/css/forms.css", "less_css", "1.0", "all");
-	
-	wp_enqueue_style("blog", get_bloginfo('template_directory') . "/framework/css/blog.css", "less_css", "1.0", "all");
-
-	wp_enqueue_style("defaults", get_bloginfo('template_directory') . "/framework/css/defaults.css", "less_css", "", "all");
-
-	wp_enqueue_style("media_queries", get_bloginfo('template_directory') . "/interface/css/media-queries.css", "less_css", "1.0", "all");
 		
-	wp_enqueue_style("master", get_bloginfo('template_directory') . "/interface/css/master.css", "less_css", "1.0", "all");
+	wp_enqueue_style("master", get_bloginfo('template_directory') . "/interface/css/master.less", "less_css", "1.0", "all");
 		
-	wp_enqueue_script("jquery");
+	//wp_enqueue_style("master-compiled", get_bloginfo('template_directory') . "/interface/css/master.css", "", "1.0", "all");
 	
 	wp_enqueue_script("functions", get_bloginfo('template_directory') . "/framework/js/functions.js", "jquery");
 
@@ -94,7 +84,7 @@ function enqueue_scripts_styles(){
 	add_filter( 'style_loader_tag', 'less_rel_stylesheets', 10, 2);
 	function less_rel_stylesheets($html, $handle){
        
-	 if ( ! in_array( $handle, array( 'master', 'defaults','forms', 'navigation', 'blog', 'typography','media-queries' ) ) ) // dont't forget to add all of your LESS stylesheets
+	 if ( ! in_array( $handle, array( 'master' ) ) ) // dont't forget to add all of your LESS stylesheets
 	                return $html;
 
 	        return str_replace( "rel='stylesheet'", "rel='stylesheet/less'", $html );
