@@ -20,7 +20,7 @@ else{
 }
 
 $sic_theme = new SicFramework('sic', array(
-		'dev_mode' => TRUE,
+		'dev_mode' => FALSE,
 		'features' => array(
 						'tabs' => TRUE,
 						'lightbox' =>  TRUE,
@@ -80,9 +80,9 @@ if(!is_admin()){
 
 	wp_enqueue_style("reset", get_bloginfo('template_directory') . "/framework/css/reset.css", "", "", "all");
 		
-	wp_enqueue_style("master", get_bloginfo('template_directory') . "/interface/css/master.less", "less_css", "1.0", "all");
+	//wp_enqueue_style("master", get_bloginfo('template_directory') . "/interface/css/master.less", "less_css", "1.0", "all");
 		
-	//wp_enqueue_style("master-compiled", get_bloginfo('template_directory') . "/interface/css/master.css", "", "1.0", "all");
+	wp_enqueue_style("master-compiled", get_bloginfo('template_directory') . "/interface/css/master.css", "", "1.0", "all");
 	
 	wp_enqueue_script("functions", get_bloginfo('template_directory') . "/framework/js/functions.js", "jquery");
 

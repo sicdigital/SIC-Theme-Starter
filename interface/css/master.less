@@ -5,16 +5,23 @@
 @accent-color: #75CDEC;
 @header-color: #353535;
 
-@import '../../framework/css/defaults.less';
-@import '../../framework/css/navigation.less';
-@import '../../framework/css/blog.less';
-@import '../../framework/css/typography.less';
+@navWidth:80%;
+@navBg:#252525;
+@barColor:#353535;
+@barHeight:50px;
+@responsiveButton:#666;
+@bodyWidth:1140px;
 
 ul.social_links li{
 	width:32px;
 	height:32px;
 	display:block;
 	float:left;
+}
+
+.contact_info{
+	text-align:right;
+	color:#fff;
 }
 
  /***************************
@@ -29,20 +36,30 @@ Featured image
 .mobile-only{
 	display:none !important;
 }
+
 @media screen and (min-width:1024px){
  
 		
 }
 
 
-@media screen and (min-width:960px) and (max-width: 1024px){
+@media screen and (max-width: 1140px){
 
-	
+	.body_container {
+	width: 960px !important;
+	margin-top: 20px;
+	margin: auto;
 }
 
+#content_block.aside-right #primary_content {
+width: 72%;
 
+}
+
+}
 /* iPad [portrait + landscape] */
 @media only screen and (min-width: 768px) and (max-width: 960px) {
+
 
 
 }
@@ -55,17 +72,7 @@ smaller than 768
 *************************************************************************************/
 @media screen and (max-width: 768px) {
 
-		
-
-}
-
-
-	
-/************************************************************************************
-smaller than 560
-*************************************************************************************/
-@media screen and (max-width: 480px) {
-	#header .branding, #header .phone, #header .address{
+		#header .branding, #header .phone, #header .address{
 		width:95% !important;
 		text-align:center !important;
 		float:none !important;
@@ -122,4 +129,21 @@ width: 95%;
 }
 
 }
+
+
+	
+/************************************************************************************
+smaller than 560
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+	
+
+}
+
+
+@import '../../framework/css/defaults.less';
+@import '../../framework/css/navigation.less';
+@import '../../framework/css/blog.less';
+@import '../../framework/css/typography.less';
+
 

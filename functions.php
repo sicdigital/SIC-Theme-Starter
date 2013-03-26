@@ -124,7 +124,7 @@ function header_contact(){
 	
 	echo '
 	<div class="branding one_half">'. sic_logo() .'</div><!--branding-->
-	<div class="social one_half cf last">
+	<div class="social contact_info one_half cf last">
 	<div class="phone">305-741-4742</div>
 	<div class="address">6948 Collins ave #207</div>
 

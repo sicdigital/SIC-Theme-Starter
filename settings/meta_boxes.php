@@ -222,54 +222,7 @@ $meta_boxes[] = array(
 );
 
 
-$meta_boxes[] = array(
-		'title'  => 'Page Style Settings',
-		'pages' => array( 'post', 'page' ),
 
-		'fields' => array(
-		
-			array(
-				'name' => 'Full Background Image',
-				'id'   => "{$prefix}page_bg_image",
-				'type' => 'thickbox_image',
-				'desc' => 'If you want to have a different background image for this specifc page add it here. Otherwise if you want to set the default visit <a href="">Your Options Panel</a>',
-
-			),	
-
-			array(
-				'name' => 'Body Background',
-				'id'   => "{$prefix}page_body_bg",
-				'type' => 'select',
-				'desc' => 'You can make your body background white black or transparent, use transparent to show off a full size image background',
-				// Array of 'value' => 'Label' pairs for select box
-				'options'  => array(
-				'#fff' => 'White',
-				'#000' => 'Black',
-				'transparent' => 'Transparent',
-
-			),
-			// Select multiple values, optional. Default is false.
-			'multiple' => false,
-			),
-
-				array(
-				'name' => 'Body Text Color',
-				'id'   => "{$prefix}page_body_text",
-				'type' => 'select',
-				'desc' => 'You can set the mood of your page by changing the background color. If you change to black, its a good idea to make your text white.',
-				// Array of 'value' => 'Label' pairs for select box
-				'options'  => array(
-				'#000' => 'Black',
-				'#fff' => 'White',
-
-			),
-			// Select multiple values, optional. Default is false.
-			'multiple' => false,
-			),
-
-		
-		),
-	);
 // // 2nd meta box
 // $meta_boxes[] = array(
 // 	'title' => 'Advanced Fields',
