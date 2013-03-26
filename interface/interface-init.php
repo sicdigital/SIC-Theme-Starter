@@ -7,14 +7,17 @@
  * This is the latest action in the API you can run wp_enqueue_scripts & wp_enqueue_style.
  */
 
-
-
-
 $sic_sidebars = get_option('sic_theme');
 $sic_sidebars = $sic_sidebars['multi_sidebar'];
 $queue = array('Default');
+if(is_array($sic_sidebars)){
 $sic_sidebars = array_merge($queue, $sic_sidebars);
 $sic_sidebars = array_combine($sic_sidebars, $sic_sidebars);
+}
+else{
+	
+	$sic_sidebars = $queue;
+}
 
 $sic_theme = new SicFramework('sic', array(
 		'dev_mode' => TRUE,
