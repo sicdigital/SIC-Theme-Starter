@@ -10,8 +10,6 @@ The purpose of this page is as a fall back for all blog pages.
 			<!--INSERT OPTION in page to display or not-->
 			<h2 class="page_title"><?php wp_title(''); ?></h2> 
 			
-			<div class="breadcrumb_wrap"><?php sic_breadcrumbs();?></div>
-
 		</header><!-- .entry-header -->
 		
 		<section class="page_body">
@@ -28,24 +26,7 @@ The purpose of this page is as a fall back for all blog pages.
 									
 							<h3 class="entry_title"><?php the_title(); ?></h3>
 	 								
-	 								<div class="entry_meta">
-									
-										<?php
-											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>' ),
-												get_permalink(),
-												get_the_date( 'c' ),
-												get_the_date(),
-												get_author_posts_url( get_the_author_meta( 'ID' ) ),
-												sprintf( esc_attr__( 'View all posts by %s'), get_the_author() ),
-												get_the_author()
-											);
-										?>
-
-										<?php if ( comments_open() ) : comments_popup_link( '', '1 comment', '% comments', 'comments-link', 'Comments are off for this post'); endif;?>		
-									
-									</div><!--entry-meta -->
-
-						</header><!--entry-header -->
+					</header><!--entry-header -->
 					
 						
 						<div class="entry_image">
@@ -74,17 +55,11 @@ The purpose of this page is as a fall back for all blog pages.
 
 			
 			<?php endwhile; ?>
+
 			
-			<?php $index_pages = new sicPagination(); echo $index_pages->output();?>
-		
-		</section><!--primary_content -->
-
-		<?php else : ?>
-
-			<?php echo "Sorry, this article doesnt exist";?>
-
 		<?php endif; ?>
 						
+		</section><!--primary_content -->
 
 		<?php get_template_part( 'sidebar' ); ?>
 			
