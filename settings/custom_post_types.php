@@ -1,19 +1,61 @@
 <?php
 
-$portfolio = new PostType("Portfolio", 
 
-	array(
-            "label" => 'Portfolio',
-            'singular_name' => 'Portfolio Item',
-            "public" => true,
-            "publicly_queryable" => true,
-            "query_var" => true,
-            #"menu_icon" => get_stylesheet_directory_uri() . "/article16.png",
-            "rewrite" => true,
-            "capability_type" => "post",
-            "hierarchical" => false,
-            "menu_position" => null,
-            "supports" => array("title", "editor", 'thumbnail', 'page-attributes', 'post-formats'),
-            'has_archive' => true
-        )
-	);
+
+$sides = new PostType("Sides & Snack");
+$sides->add_meta_box('Meal Info', array(
+      'price' => 'text',
+      'calories' => 'text',
+      'protein' => 'text',
+      'carbs' => 'text',
+      'fat' => 'text',
+      'saturated' => 'text',
+      'cholesterol' => 'text',
+      'sodium' => 'text',
+      'fiber' => 'text',
+      'weight_watchers' => 'text'
+
+));
+$breakfast = new PostType("Breakfast");
+$breakfast->add_meta_box('Meal Info', array(
+       'price' => 'text',
+      'calories' => 'text',
+      'protein' => 'text',
+      'carbs' => 'text',
+      'fat' => 'text',
+      'saturated' => 'text',
+      'cholesterol' => 'text',
+      'sodium' => 'text',
+      'fiber' => 'text',
+      'weight_watchers' => 'text'
+
+));
+$lunch = new PostType("Lunches & Dinner");
+$lunch->add_meta_box('Meal Info', array(
+      'price' => 'text',
+      'calories' => 'text',
+      'protein' => 'text',
+      'carbs' => 'text',
+      'fat' => 'text',
+      'saturated' => 'text',
+      'cholesterol' => 'text',
+      'sodium' => 'text',
+      'fiber' => 'text',
+      'weight_watchers' => 'text',
+      'fiber' => 'weight_watchers'
+
+));
+
+$specials = new PostType("Special");
+$specials->add_meta_box('Price', array(
+      'price' => 'text',
+      'calories' => 'text',
+      'protein' => 'text',
+      'carbs' => 'text',
+      'fat' => 'text',
+      'saturated' => 'text',
+      'cholesterol' => 'text',
+      'sodium' => 'text',
+      'fiber' => 'weight_watchers'
+
+));

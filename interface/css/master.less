@@ -12,30 +12,242 @@
 @responsiveButton:#666;
 @bodyWidth:1140px;
 
-ul.social_links li{
-	width:32px;
-	height:32px;
-	display:block;
-	float:left;
+
+
+@import '../../framework/css/defaults.less';
+@import '../../framework/css/navigation.less';
+@import '../../framework/css/blog.less';
+@import '../../framework/css/typography.less';
+
+#primary_content h1, #primary_content h2, #primary_content h3, #primary_content h4, #primary_content h5, #primary_content h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	color:#333;
+	font-weight:bold;
+}
+.inner{
+	margin:auto;
+}
+ul.social_links li a{
+	width:42px;
+	height:42px;
+
+}
+ul.social_links .facebook{	
+	background-image:url('../images/facebook.jpg');
+}
+ul.social_links .twitter{	
+	background-image:url('../images/twitter.jpg');
+}
+ul.social_links .rss{	
+	background-image:url('../images/rss.png');
 }
 
-.contact_info{
-	text-align:right;
-	color:#fff;
+.hide{
+	display:none !important;
 }
+.body_container{
+	width:980px;
+}
+#content_block{
+		background-color:#FFFEF2;
+
+}
+
+.inline_wrap{
+	min-height:300px;
+	text-align:center;
+}
+
+.nutritional_info {
+height:20px;
+  
+}
+
+.item .content img{
+	display:block;
+	max-width:100%;
+
+}
+.nutritional_info .label{
+}text-align:right;
 
  /***************************
 
 Featured image
 
 ****************************/
+.top_bar{
+	.gradient(#e1c275, #fee095);
+	background-color:#FEE095;
+	height:37px;
+	top:0px;
+	line-height:35px;
+	border-bottom:1px solid #d2b66e;
+
+}
+
+
+.top_bar .inner{
+	width:980px;
+	color:#890000;
+}
+
+.top_bar .phone{
+	float:right;
+	background-color:#3668c0;
+	height:28px;
+	margin-top:4px;
+	line-height:28px;
+	color:#fff;
+	padding:0px 15px 0px 44px;
+	background-image:url('../images/phone.jpg');
+background-repeat: no-repeat;
+font-size:.8em;
+
+}
+.top_bar ul.social_links{
+	margin-top:4px;
+}
+.filter-wrap{
+text-align: center;
+margin:auto;
+}
+#filters li{
+	display:inline;
+}
+#filters li a{
+	padding:10px 20px;
+	color:#fff;
+	background-color: #890000;
+}
+
+.contact_info{
+	text-align:right;
+	line-height:1.5em;
+}
+.contact_info h3{
+	color:#890000;
+	font-size:1.5em;
+	padding-bottom:.5em;
+
+}
+.contact_info .truck{
+background-image:url('../images/truck.png');
+height:124px;
+width:171px;
+float:right;
+margin-top:-20px;
+}
+
+.sub{font-size:.7em;}
+
+ul.social_links li a {
+width: 28px;
+height: 28px;
+margin:0px;
+}
+body{
+	background-image:url('../images/wood-bg.jpeg');
+	font-size:.9em;
+	color:#020001;
+}
+
+nav.full_horizontal, div.nav{
+		.gradient(#e1c275, #fee095);
+
+	background-color:#FEE095;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+border:1px solid #E2CE99;
+
+}
+
+nav.full_horizontal > ul > li a, div.nav > ul > li a{
+color:#1d1d1d !important;
+text-decoration: none;
+text-shadow: none;
+text-align: center;
+font-size: 1em;
+padding: 0 65px;
+border-right:1px solid #f5d78b;
+border-left:1px solid #dcc381;
+
+
+}
+
+nav.full_horizontal > ul > li:hover > a, div.nav > ul > li:hover > a, .current-menu-item a {
+		background-color:#FEE8B1;
+
+}
 
 
 
+nav.full_horizontal > ul > li.current-menu-item > a{
+	text-shadow:none;
+}
+.page-item-5.current_page_item a{
+border-bottom:0px
+;}
+
+header#header{
+	margin-top:20px;
+}
+.contact_info .minimum{
+position: absolute;
+left: 140px;
+top: 150px;
+}
+.contact_info h4{
+	font-size:1.5em;
+	margin-bottom:0px;
+}
+
+#header .logo img {
+float: left;
+max-width: 70%;
+padding-bottom: 18px;
+margin: auto;
+margin-left: 310px;
+}
+.top_bar .nav{
+	float:right;
+	margin-right:20px;
+}
+
+.top_bar .nav li{
+	float:left;
+	margin-left:0px;
+
+
+
+}
+.top_bar .nav li a{
+padding: 0px 20px;
+line-height: 35px;
+font-size: .7em;
+display: block;
+border-right:1px solid #f3d588;
+border-left:1px solid #dbc280;
+
+
+}
 
 .mobile-only{
 	display:none !important;
 }
+
+
+.widget-title {
+font-size: 1.3em;
+color: #890000;
+font-weight: 200;
+border-bottom: 1px solid #efefef;
+}
+
+.page_title{
+	display:none;
+}
+
+
 
 @media screen and (min-width:1024px){
  
@@ -55,6 +267,8 @@ Featured image
 width: 72%;
 
 }
+
+
 
 }
 /* iPad [portrait + landscape] */
@@ -130,6 +344,129 @@ width: 95%;
 
 }
 
+/**************************************************************************
+
+Menu Page
+
+*************************************************************************/	
+	
+#menu_wrap, #lunch_wrap{
+}
+	.menu_group {
+		float: left;
+		width: 33.3%;
+		font-size: 12px;
+		padding: 1%;
+		margin: 30px 0% 0% 0px;
+		overflow: hidden;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		
+	}
+	
+	.menu_group	.inner{
+		padding:20px;
+			
+	}
+	.menu_header{
+		margin: 20px 0px 15px;
+		
+	}
+	.menu_group h3{
+		margin: 20px 0px;
+		font-weight: 200;
+		font-size: 18px;
+		text-align: center;
+
+	}
+	
+	.menu_group h3.staticHeader{
+		margin-top:-44px;}
+	
+	.menu_group .details{
+		font-size:12px;
+		line-height:22px;
+		margin-bottom:20px;
+		text-align:center;
+		
+	}
+		
+		
+	.menu_group ul li{
+			
+		margin:10px 0px;
+		display:block;
+		float:left;
+		width:100%;
+		border-bottom:2px dotted #e2e2e2;
+
+	}
+	
+	.menu_group .price{
+		display:block;
+		float:right;
+		font-size:12px;
+		width:25%;
+		text-align:right;
+	}
+			
+	.menu_group .item{
+		width:74%;
+		float:left;
+		display:block;
+	}
+		
+	 .menu_group .item .title{
+		font-weight:bold;
+		font-size:14px;
+	} 
+	
+	
+/************************************************
+
+Isotop
+
+************************************************/
+	
+	.isotope,
+	.isotope .isotope-item {
+	  /* change duration value to whatever you like */
+	  -webkit-transition-duration: 0.8s;
+	     -moz-transition-duration: 0.8s;
+	      -ms-transition-duration: 0.8s;
+	       -o-transition-duration: 0.8s;
+	          transition-duration: 0.8s;
+	}
+
+	.isotope {
+	  -webkit-transition-property: height, width;
+	     -moz-transition-property: height, width;
+	      -ms-transition-property: height, width;
+	       -o-transition-property: height, width;
+	          transition-property: height, width;
+			  background-color: rgba(255, 255, 255, 0.75);
+			  border-radius:5px;
+	}
+
+	.isotope .isotope-item {
+	  -webkit-transition-property: -webkit-transform, opacity;
+	     -moz-transition-property:    -moz-transform, opacity;
+	      -ms-transition-property:     -ms-transform, opacity;
+	       -o-transition-property:      -o-transform, opacity;
+	          transition-property:         transform, opacity;
+	}
+
+	/**** disabling Isotope CSS3 transitions ****/
+
+	.isotope.no-transition,
+	.isotope.no-transition .isotope-item,
+	.isotope .isotope-item.no-transition {
+	  -webkit-transition-duration: 0s;
+	     -moz-transition-duration: 0s;
+	      -ms-transition-duration: 0s;
+	       -o-transition-duration: 0s;
+	          transition-duration: 0s;
+	}
+
 
 	
 /************************************************************************************
@@ -140,10 +477,5 @@ smaller than 560
 
 }
 
-
-@import '../../framework/css/defaults.less';
-@import '../../framework/css/navigation.less';
-@import '../../framework/css/blog.less';
-@import '../../framework/css/typography.less';
 
 

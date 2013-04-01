@@ -35,6 +35,33 @@
 	
 	<?php do_action('body_open');?>
 
+
+<div class="top_bar">
+	<div class="inner">
+<div style="float:left;">
+</div>
+<div style="float:right">
+<div class="phone">(561) 330-4525</div>
+
+
+	<ul class="social_links">
+			<li><a href="https://facebook.com/fitfoodexpress" target="_blank" class="facebook"></a></li>
+			<li><a href="https://twitter.com/fitfoodexpress" target="_blank" class="twitter"></a></li>
+	</ul>
+
+		<ul class="nav">
+			<li><a href="https://facebook.com/fitfoodexpress" target="_blank"> About Us</a></li>
+			<li><a href="https://twitter.com/fitfoodexpress" target="_blank"> Location</a></li>
+			<li><a href="https://twitter.com/fitfoodexpress" target="_blank"> Email Deals</a></li>
+	</ul>
+
+
+</div>
+
+	</div><!--inner-->
+
+</div>
+
 	<div class="body_container">
 	
 	<header id="header">

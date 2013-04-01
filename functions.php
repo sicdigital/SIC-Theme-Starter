@@ -123,12 +123,18 @@ function header_contact(){
 	
 	
 	echo '
-	<div class="branding one_half">'. sic_logo() .'</div><!--branding-->
-	<div class="social contact_info one_half cf last">
-	<div class="phone">305-741-4742</div>
-	<div class="address">6948 Collins ave #207</div>
-
-	</div>
+		<div class="branding one_half">'. sic_logo() .'</div><!--branding-->
+		<div class="contact_info one_half cf last">
+		<h3>Delray Beach Delivery!</h3>
+		Monday – Friday 8AM – 7PM<br  />
+		Saturday 10AM – 5PM <br  />
+		Sunday 10AM – 7PM<br  />
+		<div class="delivery">
+		<span class="sub minimum"><h4>Call to Place an Order!</h4>
+		*$20 Minimum Order</span>
+		<div class="truck"></div>
+		</div>
+		</div>
 	';
 
 }

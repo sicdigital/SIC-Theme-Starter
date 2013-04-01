@@ -24,7 +24,7 @@ $sic_theme = new SicFramework('sic', array(
 		'features' => array(
 						'tabs' => TRUE,
 						'lightbox' =>  TRUE,
-						'isotope' => FALSE),
+						'isotope' => TRUE),
 		
 		'design' => array(
 			'background' => array( 
@@ -35,7 +35,7 @@ $sic_theme = new SicFramework('sic', array(
 		
 
 		'footer' => array(
-			'layout' => '4',
+			'layout' => '0',
 			'display_copyright' => TRUE
 		),//footer
 
