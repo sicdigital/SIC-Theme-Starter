@@ -1,16 +1,14 @@
 <?php get_template_part('header');?>	
 		
 	<header class="page_header">											
-		<!--INSERT OPTION in page to display or not-->
-		<h2 class="page_title"><?php the_title();?></h2> 
 		
-		<div class="breadcrumb_wrap"><?php sic_breadcrumbs();?></div>
+		<!--INSERT OPTION in page to display or not-->
 
 	</header><!-- .entry-header -->
 
-	<section class="page_body">
-
-		<section id="primary_content">
+	<section class="page_body" >
+		
+		<section id="primary_content" > 
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
@@ -34,7 +32,7 @@
 
 		</section><!--primary_content-->
 			
-<?php get_template_part( 'sidebar' ); ?>
+	<?php // get_template_part( 'sidebar' ); ?>
 			
 		</section><!--page body-->
 

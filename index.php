@@ -8,7 +8,7 @@ The purpose of this page is as a fall back for all blog pages.
 
 		<header class="page_header">											
 			<!--INSERT OPTION in page to display or not-->
-			<h2 class="page_title"><?php wp_title(''); ?></h2> 
+			
 			
 			<div class="breadcrumb_wrap"><?php sic_breadcrumbs();?></div>
 
@@ -26,7 +26,7 @@ The purpose of this page is as a fall back for all blog pages.
 
 					<header class="entry_header">
 									
-							<h3 class="entry_title"><?php the_title(); ?></h3>
+							<h3 class="entry_title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
 	 								
 	 								<div class="entry_meta">
 									

@@ -40,8 +40,9 @@ if($slides){
 	}
 		$atts = array( 
 		'id' => 'page_slider', 
-		'animation' => 'slide',
-		'controlNav' => TRUE, 
+		'animation' => 'fade',
+		'controlNav' => FALSE,
+
 	);
 		
 		if($content){$slider = new Slider($content, $atts);
@@ -80,55 +81,12 @@ function responsive_nav(){
 
 
 
-		
-		function ajax_footer(){
-		
-		$dir = get_bloginfo('stylesheet_directory');
-		
-			$query = <<<EOD
-			<script>
-			jQuery(document).ready(function(\$){
- 
-				 siteurl = 'http://' + top.location.host.toString();
- 
-			        jQuery(document).delegate("a[href^='"+ siteurl +"']:not([href*='/wp-admin/']):not([href*='/wp-login.php']):not([hrefjQuery='/feed/'])", "click", function(e) {
- 
-		                var uri = this.pathname + this.search + this.hash;
-
-						
-			 				jQuery('#content_block').load(this.href+" #content_block",null, 
-					
-								function (responseText, textStatus, XMLHttpRequest) {
-						
-									if (textStatus == "success") {
-
-										jQuery('#content_block').replaceWith(\$(this).find("#content_block"));}// if
-										//jQuery('ajax_footer').replaceWith(\$(this).find("head"));// if
-
-									});//function
-	               
-								    history.pushState(null, null, uri );
-				                
-				                return e.preventDefault();
-			        });//delegate
-			}); //document.ready
-			</script>
-EOD;
-echo $query;
-		}
-		
-
 			
 function header_contact(){
 	
 	
 	echo '
 	<div class="branding one_half">'. sic_logo() .'</div><!--branding-->
-	<div class="social contact_info one_half cf last">
-	<div class="phone">305-741-4742</div>
-	<div class="address">6948 Collins ave #207</div>
-
-	</div>
 	';
 
 }

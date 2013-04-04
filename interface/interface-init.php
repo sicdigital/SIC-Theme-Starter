@@ -35,15 +35,18 @@ $sic_theme = new SicFramework('sic', array(
 		
 
 		'footer' => array(
-			'layout' => '4',
+			'layout' => '0',
 			'display_copyright' => TRUE
 		),//footer
 
 		'pages' => array(
 			'title' => TRUE,
-			'layout' => 'rsidebar',
+			'layout' => 'full',
 			'sidebars' => $sic_sidebars
-			)//page_settings
+			),//page_settings
+			
+			'blog' => array('title' => TRUE,
+							'layout' => 'rsidebar')
 	)
 );
 

@@ -25,7 +25,6 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<?php wp_head();?>
-	<script type="text/javascript"> (less = less || {}).env = 'development';</script>
 
 </head>
 
@@ -44,16 +43,20 @@
 		<div class="inner cf">
 			
 			<?php do_action('header_inner');?>
+				
+		<nav class="full_horizontal one_half last">
 			
+			<?php wp_nav_menu( array( 'container' => NULL, 'menu_id' => 'primary_nav', 'enable_bp_links' => true, 'show_home' => true ) ); ?></nav>
+	
 		</div><!--inner-->
-		
-		<?php wp_nav_menu( array( 'container' => 'nav', 'container_class' => 'full_horizontal cf', 'menu_id' => 'primary_nav', 'enable_bp_links' => true, 'show_home' => true ) ); ?>
 	
 	</header>
 	
 	<?php do_action('after_header');?>
 
-	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>">
+	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>" style="background-image:url('<?php echo $image[0];?>');">
 	
 	<?php do_action( 'content_block_outer' ); ?>
 					
