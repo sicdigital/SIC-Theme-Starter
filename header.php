@@ -56,8 +56,48 @@
 
 	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>" style="background-image:url('<?php echo $image[0];?>');">
-	
+<style>
+
+@media screen and (min-width: 768px) {
+	#content_block{	background-image:url("<?php echo $image[0];?>") !important;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+body{
+	background-image:url("<?php echo $image[0];?>") !important;
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#content_block{
+	background:transparent;
+}
+
+.page #primary_content{
+	width:100% !important;
+	float:none;
+}
+.gallery_wrap{
+	float: none !important;
+position: relative !important;
+height: inherit !important;
+width: inherit !important;
+}
+
+.page_gallery{
+	position:relative !important
+}
+}
+
+	</style>
+
+	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>">
+	<div class="content_block_upper cf"></div>
 	<?php do_action( 'content_block_outer' ); ?>
 					
 	<div class="inner cf">
