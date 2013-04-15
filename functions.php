@@ -86,7 +86,7 @@ function header_contact(){
 	
 	
 	echo '
-	<div class="branding one_half">'. sic_logo() .'</div><!--branding-->
+	<div class="branding one_third">'. sic_logo() .'</div><!--branding-->
 	';
 
 }
