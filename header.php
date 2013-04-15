@@ -44,7 +44,7 @@
 			
 			<?php do_action('header_inner');?>
 				
-		<nav class="full_horizontal one_half last">
+		<nav class="full_horizontal two_third last">
 			
 			<?php wp_nav_menu( array( 'container' => NULL, 'menu_id' => 'primary_nav', 'enable_bp_links' => true, 'show_home' => true ) ); ?></nav>
 	
