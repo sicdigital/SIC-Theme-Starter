@@ -65,7 +65,7 @@
 }
 	></style>
 	<div class="mobile_nav mobile-only">
-	<a class="button" href="#">Click to Call: 305-741-4742</a>
+	<a class="button" href="tel:305-468-9070">305-468-9070</a>
 	<a class="button" href="/contact-us">Contact Us</a>
 	</div>
 	<?php do_action('after_header');?>
