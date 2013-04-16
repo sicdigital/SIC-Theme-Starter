@@ -30,8 +30,8 @@ Template Name: Page with a Gallery
 		bottom:0px;
 	}
 	.gallery_link img{ 
-		width:75px; 
-		height:75px; 
+		width:65px; 
+		height:65px; 
 		border-radius:100px;
 	}
 </style>

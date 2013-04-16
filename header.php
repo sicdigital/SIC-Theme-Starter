@@ -66,12 +66,15 @@
 
 @media screen and (max-width: 768px) {
 body{
-	background-image:url("<?php echo $image[0];?>") !important;
+	color:#666;
 	  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
+}
+h1,h2,h3,h4,h5,h6{
+	color:#666;
 }
 
 #content_block{
