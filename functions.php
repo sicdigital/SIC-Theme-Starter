@@ -68,12 +68,12 @@ function responsive_nav(){
 		  <span class="icon-bar"></span>
 		</div>
 			<ul class="social_links cf">
-			<li><a href="http://facebook.com/yogawithapril" target="_blank" class=" facebook"></a></li>
-			<li><a href="http://facebook.com/yogawithapril" target="_blank" class=" pinterest"></a></li>
-			<li><a href="http://facebook.com/yogawithapril" target="_blank" class=" instagram"></a></li>
-			<li><a href="http://facebook.com/yogawithapril" target="_blank" class=" vimeo"></a></li>
-			<li><a href="http://twitter.com/aprilmartucci" target="_blank" class=" twitter"></a></li>
-			<li><a href="http://youtube.com/aprilmartucci" target="_blank" class=" youtube"></a></li>
+			<li><a href="http://facebook.com/evogaevents" target="_blank" class=" facebook"></a></li>
+			<li><a href="https://twitter.com/EVogaEvents" target="_blank" class=" twitter"></a></li>
+
+			<li><a href="http://pinterest.com/evogaevents/" target="_blank" class=" pinterest"></a></li>
+			<li><a href="http://instagram.com/evogaevents" target="_blank" class=" instagram"></a></li>
+			<li><a href="http://www.youtube.com/evogaevents" target="_blank" class=" youtube"></a></li>
 		</ul>
 	</div>';
 	
