@@ -51,7 +51,23 @@
 		</div><!--inner-->
 	
 	</header>
-	
+	<style>
+.mobile_nav a.button{
+	width:100%;
+	display:block;
+	margin-bottom:5px;
+	background-color:#DF2585;
+	padding:10px 0px;
+
+}
+.mobile_nav{
+	margin-bottom:20px;
+}
+	></style>
+	<div class="mobile_nav mobile-only">
+	<a class="button" href="#">Click to Call: 305-741-4742</a>
+	<a class="button" href="/contact-us">Contact Us</a>
+	</div>
 	<?php do_action('after_header');?>
 
 	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>

@@ -17,7 +17,7 @@ Template Name: Page with a Gallery
 	.gallery_wrap {
 		float: left;
 		position: relative;
-		height: 512px;
+		height: 630px;
 		width:50%;
 	}
 
