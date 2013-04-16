@@ -2,7 +2,9 @@
 <?php wp_footer();?>
 
 </section><!--content_block-->
+
 </div><!--end body_wrap-->
-<?php do_action('sic_footer')?>
+<footer id="sub_footer">Copyright SIC Digital LLC All Rights Reserved Etc</footer>
+
 </body>
 </html>

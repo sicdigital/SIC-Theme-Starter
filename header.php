@@ -35,7 +35,7 @@
 	<?php do_action('body_open');?>
 
 	<div class="body_container">
-	
+
 	<header id="header">
 
 		<?php do_action('header_before_inner');?>
@@ -43,9 +43,9 @@
 		<div class="inner cf">
 			
 			<?php do_action('header_inner');?>
-				
+		
 		<nav class="full_horizontal two_third last">
-			
+		
 			<?php wp_nav_menu( array( 'container' => NULL, 'menu_id' => 'primary_nav', 'enable_bp_links' => true, 'show_home' => true ) ); ?></nav>
 	
 		</div><!--inner-->
