@@ -18,7 +18,7 @@ Template Name: Page with a Gallery
 		float: left;
 		position: relative;
 		height: 630px;
-		width:50%;
+		width:60%;
 	}
 
 	.page_gallery{
