@@ -1,5 +1,5 @@
 <?php /*
-Template Name: Page with a Gallery
+Template Name: Full Width
 */
 ?>
 <?php get_template_part('header');?>	
