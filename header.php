@@ -79,40 +79,6 @@
 }
 }
 
-
-@media screen and (max-width: 768px) {
-body{
-	color:#666;
-	  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-h1,h2,h3,h4,h5,h6{
-	color:#666;
-}
-
-#content_block{
-	background:transparent;
-}
-
-.page #primary_content{
-	width:100% !important;
-	float:none;
-}
-.gallery_wrap{
-	float: none !important;
-position: relative !important;
-height: inherit !important;
-width: inherit !important;
-}
-
-.page_gallery{
-	position:relative !important
-}
-}
-
 	</style>
 
 	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>">

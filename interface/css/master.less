@@ -170,42 +170,39 @@ Featured image
 
 
 
-@media screen and (min-width:1024px){
- 
-		
-}
-
-
-@media screen and (max-width: 1140px){
-
-	.body_container {
-	width: 1100px !important;
-	margin-top: 20px;
-	margin: auto;
-}
-
-#content_block.aside-right #primary_content {
-width: 72%;
-
-}
-
-}
-/* iPad [portrait + landscape] */
-@media only screen and (min-width: 768px) and (max-width: 960px) {
-
-
-
-}
-
-
-
-
 /************************************************************************************
 smaller than 768
 *************************************************************************************/
 
 
 @media screen and (max-width: 768px) {
+
+body{
+	color:#666 !important;
+	 
+}
+h1,h2,h3,h4,h5,h6{
+	color:#666;
+}
+
+#content_block{
+	background:transparent;
+}
+
+.page #primary_content{
+	width:100% !important;
+	float:none;
+}
+.gallery_wrap{
+	float: none !important;
+position: relative !important;
+height: inherit !important;
+width: inherit !important;
+}
+
+.page_gallery{
+	position:relative !important
+}
 
 	.page #primary_content{
 	width: 100% !important;
@@ -373,6 +370,7 @@ background-image:url('../images/social/youtube.png');
 background-image:url('../images/social/vimeo.png')	;
 	
 }
+
 
 
 
