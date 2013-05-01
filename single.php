@@ -1,24 +1,33 @@
 <?php
-/**
- * WordPress Template: Single
- *
- *
- */
+/*
+Index.php
+The purpose of this page is as a fall back for all blog pages. 
+*/
+?>
+<?php get_template_part( 'header' ); 	?>
 
-get_template_part( 'header' ); ?>
-
-					<?php if ( have_posts() ) : the_post(); ?>
-
+		<header class="page_header">											
+			<!--INSERT OPTION in page to display or not-->
+						<img src="http://placehold.it/940x120"/>
 			
-						<section id="primary_content" class="hfeed">
+		</header><!-- .entry-header -->
+		
+		<section class="page_body cf">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<style type="text/css">
+		<section id="primary_content">
+			
+			<?php if ( have_posts() ) : ?>	
+			
+			<?php while ( have_posts() ) : the_post(); ?>
 
-								</style>
-								<header class="entry_header">
-									<h1 class="entry_title"><?php the_title(); ?></h1>
- 								<div class="entry_meta">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+					<header class="entry_header">
+									
+							<h3 class="entry_title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+	 								
+	 								<div class="entry_meta">
+									
 										<?php
 											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>' ),
 												get_permalink(),
@@ -29,39 +38,58 @@ get_template_part( 'header' ); ?>
 												get_the_author()
 											);
 										?>
-									</div><!-- .entry-meta -->
 
-								</header><!-- .entry-header -->
-								<div class="entry_image"><?php the_post_thumbnail( 'post_featured'); ?></div>
+										<?php if ( comments_open() ) : comments_popup_link( '', '1 comment', '% comments', 'comments-link', 'Comments are off for this post'); endif;?>		
+									
+									</div><!--entry-meta -->
 
-								<div class="entry-content">
-									<?php the_content( __( 'Continue reading <span class="meta_nav">&rarr;</span>' ) ); ?>
-									<?php wp_link_pages( array( 'before' => '<div class="page_link"><span class="page_link_meta">' . __( 'Pages:') . '</span>', 'after' => '</div>', 'next_or_number' => 'number' ) ); ?>
-								</div><!-- .entry-content -->
+						</header><!--entry-header -->
+					
+						
+						<div class="entry_image">
+						
+							<?php the_post_thumbnail( 'post_featured'); ?>
+					
+						</div><!--entry_image-->
 
-								<footer class="entry_meta">
-									<span class="tax_link"></span>
-									<span class="bookmark_link"><?php printf( __( 'Bookmark the <a href="%s" title="Permalink to %s" rel="bookmark">permalink</a>.'), get_permalink(), the_title_attribute( 'echo=0' ) ); ?></span>
-									<span class="comments_link"><?php comments_popup_link( __( 'Leave a comment'), __( '1 Comment'), __( '% Comments' ) ); ?></span>
-									<?php edit_post_link( __( 'Edit'), '<span class="meta_sep">|</span> <span class="edit_link">', '</span>' ); ?>
-								</footer><!-- .entry-meta -->
+						
+						<div class="entry_content">
+						
+							<?php the_content(); ?>
+						
+							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span class="page-link-meta">' . __( 'Pages:') . '</span>', 'after' => '</div>', 'next_or_number' => 'number' ) ); ?>
+						
+						</div><!-- .entry-content -->
 
-							</article><!-- #post-<?php the_ID(); ?> -->	
+						
+						<footer class="entry_meta">
+						
+							<?php edit_post_link( __( 'Edit'), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+						
+						</footer><!-- .entry-meta -->
 
-							<?php comments_template( '', true ); ?>
+				</article><!-- #post-<?php the_ID(); ?> -->
+
+	<?php comments_template( '', true ); ?>
 
 							<?php get_template_part( 'pagination' ); ?>
+			
+			<?php endwhile; ?>
+			
+			<?php $index_pages = new sicPagination(); echo $index_pages->output();?>
+		
+		</section><!--primary_content -->
 
+		<?php else : ?>
 
-						</section><!-- .hfeed -->
+			<?php echo "Sorry, this article doesnt exist";?>
 
-					<?php else : ?>
+		<?php endif; ?>
+						
 
-						<?php get_template_part( 'loop-404' ); ?>
+		<?php get_template_part( 'sidebar' ); ?>
+			
+		</section><!--page body-->
 
-					<?php endif; ?>
-
-
-				<?php get_template_part( 'sidebar' ); ?>
-
-<?php get_template_part( 'footer' ); ?>
+		<?php get_template_part( 'footer' ); ?>
+				

@@ -16,7 +16,6 @@ if($sidebar == ""){$sidebar = 'Default';}
 if( $position == 'rsidebar' ){ ?>
 
 	<aside id="aside_<?php echo $post->ID;?>" class="aside aside-right">
-		<div class="inner">
 		
 		<?php	
 			if(is_home() || is_single() || is_category() || is_archive()){
@@ -35,14 +34,12 @@ if( $position == 'rsidebar' ){ ?>
 
 			?>
 			
-		</div>
 	</aside>
 	
 <?php } 
 if( $position == 'lsidebar'){?>
 
 	<aside id="aside_<?php echo $post->ID; ?>" class="aside aside-left">
-		<div class="inner">
 			
 			<?php if(is_home() || is_single()){
 			 dynamic_sidebar( 'Main Sidebar' );
@@ -59,7 +56,6 @@ if( $position == 'lsidebar'){?>
 			 
 			}?>
 			
-		</div>
 </aside>
 	
 			

@@ -4,8 +4,6 @@
 		<!--INSERT OPTION in page to display or not-->
 		<h2 class="page_title"><?php the_title();?></h2> 
 		
-		<div class="breadcrumb_wrap"><?php sic_breadcrumbs();?></div>
-
 	</header><!-- .entry-header -->
 
 	<section class="page_body">

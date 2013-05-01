@@ -25,7 +25,6 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<?php wp_head();?>
-	<script type="text/javascript"> (less = less || {}).env = 'development';</script>
 
 </head>
 
@@ -37,27 +36,59 @@
 
 	<div class="body_container">
 	
-	<header id="header">
+	<header id="header" class="cf">
+
+	<nav id="left_nav" class="upper_nav cf">
+		<ul>
+			<li><a href="#">Speciality Items</a>
+
+				<ul class="drop">
+					<li><a href="#">Seating</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Glassware</a></li>
+					<li><a href="#">Flatware</a></li>
+					<li><a href="#">Flatware</a></li>
+					<li><a href="#">Flatware</a></li>
+					<li><a href="#">Flatware</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Essential Items</a></li>
+			<li><a href="#">Gallery</a></li>
+			<li><a href="#">Blog</a></li>
+
+		</ul>
+	</nav>
+
+	<div id="branding" class="cf">
+		<a href="/"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/pbs-logo-300x125.png"/></a>
+	</div><!--branding-->
+
+
+	<nav id="right_nav" class="upper_nav cf">
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	
+	<form id="header_search" action="#" method="post">
+		<button type="submit"></button>
+		<input type="text" value="" name="EMAIL" class="text" id="" placeholder="search" required="">
+	</form>
+	
+	</nav>
 
 		<?php do_action('header_before_inner');?>
-	
-		<div class="inner cf">
 			
-			<?php do_action('header_inner');?>
-			
-		</div><!--inner-->
-		
-		<?php wp_nav_menu( array( 'container' => 'nav', 'container_class' => 'full_horizontal cf', 'menu_id' => 'primary_nav', 'enable_bp_links' => true, 'show_home' => true ) ); ?>
+
 	
 	</header>
-	
+
 	<?php do_action('after_header');?>
 
-	<section id="content_block" class="cf aside aside-<?php sidebar_position_class();?>">
+	<section id="content_block" class="cf">
 	
 	<?php do_action( 'content_block_outer' ); ?>
 					
-	<div class="inner cf">
 
 	<?php do_action( 'content_block_inner' ); ?>
 		
