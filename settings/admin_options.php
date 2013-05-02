@@ -162,7 +162,36 @@
 		 				//You dont have to though, leave it blank for default.
 		 				//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
 		 				//Lets leave this as a blank section, no options just some intro text set above.
-		 				'fields' => array()
+		 				'fields' => array(
+										array('id' => 'google_plus',
+										'type' => 'text',
+										'title' => __('Google +', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+
+											array('id' => 'facebook',
+										'type' => 'text',
+										'title' => __('Facebook', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+
+												array('id' => 'twitter',
+										'type' => 'text',
+										'title' => __('Twitter', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+
+										array('id' => 'pinterest',
+										'type' => 'text',
+										'title' => __('Pinterest', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+
+		 					)
 		 				);
 					
 				

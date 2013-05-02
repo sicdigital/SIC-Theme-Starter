@@ -40,7 +40,7 @@
 
 	<nav id="left_nav" class="upper_nav cf">
 		<ul>
-			<li><a href="#">Speciality Items</a>
+			<li><a href="/specialty-items">Speciality Items</a>
 
 				<ul class="drop">
 					<li><a href="#">Seating</a></li>
@@ -52,9 +52,9 @@
 					<li><a href="#">Flatware</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Essential Items</a></li>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="#">Blog</a></li>
+			<li><a href="/essential-items">Essential Items</a></li>
+			<li><a href="/gallery">Gallery</a></li>
+			<li><a href="/blog">Blog</a></li>
 
 		</ul>
 	</nav>
@@ -66,8 +66,8 @@
 
 	<nav id="right_nav" class="upper_nav cf">
 		<ul>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
 		</ul>
 	
 	<form id="header_search" action="#" method="post">
