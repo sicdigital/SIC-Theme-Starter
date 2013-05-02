@@ -53,7 +53,7 @@
 				</ul>
 			</li>
 			<li><a href="/essential-items">Essential Items</a></li>
-			<li><a href="/gallery">Gallery</a></li>
+			<li><a target="_blank" href="/image-gallery">Gallery</a></li>
 			<li><a href="/blog">Blog</a></li>
 
 		</ul>

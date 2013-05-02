@@ -36,7 +36,9 @@ foreach ( $attachments as $attachment_id => $attachment ) {
                     src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/100px-Bowling_Balls_Beach_2_edit.jpg",
                     data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/1280px-Bowling_Balls_Beach_2_edit.jpg"
                     data-title="Bowling Balls"
-                    data-description="Mendocino county, California, USA.">
+                    data-description="Mendocino county, California, USA. <script>
+    document.write('<a href="' + document.referrer + '">Go Back</a>');
+</script>">
             </a>
             <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bowling_Balls_Beach_2_edit.jpg/800px-Bowling_Balls_Beach_2_edit.jpg">
                 <img 
