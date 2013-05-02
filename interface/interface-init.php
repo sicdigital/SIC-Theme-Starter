@@ -194,3 +194,39 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
 
+
+add_editor_style( 'editor-style.css' );
+
+   add_filter( 'default_content', 'custom_editor_content' );
+      function custom_editor_content( $content ) {
+         global $current_screen;
+        // if ( $current_screen->post_type == 'essentials') {
+            $content = '
+
+              <div class="one_half">
+              Columns 1 Content
+              </div>
+              <div class="one_half last">
+              Column 2 Content
+              </div>
+
+            ';
+         //}
+         // elseif ( $current_screen->post_type == 'POSTTYPE') {
+         //    $content = '
+
+         //        // TEMPLATE FOR YOUR CUSTOM POST TYPE
+
+         //    ';
+         // }
+         // else {
+         //    $content = '
+
+         //       // TEMPLATE FOR EVERYTHING ELSE
+
+         //    ';
+         // }
+         return $content;
+       }
+
+
