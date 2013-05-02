@@ -20,7 +20,7 @@ else{
 }
 
 $sic_theme = new SicFramework('sic', array(
-		'dev_mode' => FALSE,
+		'dev_mode' => TRUE,
 		'features' => array(
 						'tabs' => TRUE,
 						'lightbox' =>  TRUE,
