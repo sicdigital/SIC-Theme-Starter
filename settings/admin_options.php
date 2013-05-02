@@ -41,13 +41,6 @@
 				 				//'icon' => trailingslashit(get_template_directory_uri()).'/includes/admin/options-framework/options/img/led-icons/cog.png',
 				 				//Lets leave this as a blank section, no options just some intro text set above.
 				 				'fields' => array(
-									array(	
-										'id' => 'header_logo',
-										'type' => 'upload',
-										'title' => __('Header Logo', 'nhp-opts'), 
-										'sub_desc' => __('Upload your logo to use in the top left of the header. Will replace the Website Title in the header', 'nhp-opts'),
-										'desc' => __('Upload your logo to use in the top left of your website. Uploading an image logo replaces the header title on your site.', 'nhp-opts')
-										),
 
 									array(	
 										'id' => 'favicon',
@@ -76,78 +69,82 @@
 						
 									));
 		
-		
-
 
 		$sections[] = array(
-					'icon' => 'tablet',
+					'icon' => 'cloud-upload',
 					'icon_class' => 'icon-large',
-					'title' => __('Mobile Settings', 'nhp-opts'),
-					'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
+					'title' => __('Home Page', 'nhp-opts'),
+					'desc' => __('<p class="description">This section is for styling the images and links on the home page, items go from left to right. For managing the home page slider please see the sliders section on the left side. </p>', 'nhp-opts'),
 					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
 					//You dont have to though, leave it blank for default.
 					//	'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
 					//Lets leave this as a blank section, no options just some intro text set above.
 					'fields' => array(
-           array(
-                'id' => 'use_responsive',
-                'type' => 'select_hide_below',
-                'title' => __('Turn on Responsiveness', Redux_TEXT_DOMAIN), 
-                'sub_desc' => __('No validation can be done on this field type', Redux_TEXT_DOMAIN),
-                'desc' => __('This field requires certain options to be checked before the below field will be shown.', Redux_TEXT_DOMAIN),
-                'options' => array(
-                    '1' => array('name' => 'yes', 'allow' => 'true'),
-                    '2' => array('name' => 'no', 'allow' => 'false'),
-                ), // Must provide key => value(array) pairs for select options
-                'std' => '2'
 
-						),
+								array(	
+										'id' => 'home_image',
+										'type' => 'upload',
+										'title' => __('Home Image 1', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Upload this image at 320x300', 'nhp-opts')
+										),	
+									array('id' => 'home_image_text1',
+										'type' => 'text',
+										'title' => __('Home Image Text 1', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+									array('id' => 'home_image_link',
+										'type' => 'text',
+										'title' => __('Home Image Link 1', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
 
-                  array(
-                'id' => 'mobile_sliders',
-                'type' => 'checkbox',
-                'title' => __('Page Sliders for Mobile', Redux_TEXT_DOMAIN), 
-                'sub_desc' => __('No validation can be done on this field type', Redux_TEXT_DOMAIN),
-                'desc' => __('This field requires certain options to be checked before the below field will be shown.', Redux_TEXT_DOMAIN),
-                'switch' => TRUE,
-                'options' => array(
-               
-	               '1' => array('name' => 'no', 'allow' => 'false'),
 
-                    '2' => array('name' => 'yes', 'allow' => 'true'),
-                ), // Must provide key => value(array) pairs for select options
-                'std' => '2')
+										array(	
+										'id' => 'home_image2',
+										'type' => 'upload',
+										'title' => __('Home Image 2', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Upload this image at 320x300', 'nhp-opts')
+										),	
 
-					));
+										array('id' => 'home_image_text2',
+										'type' => 'text',
+										'title' => __('Home Image Text 2', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+										array('id' => 'home_image_link2',
+										'type' => 'text',
+										'title' => __('Home Image Link 2', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
 
-		$sections[] = array(
-					'icon' => 'cloud-upload',
-					'icon_class' => 'icon-large',
-					'title' => __('Header', 'nhp-opts'),
-					'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
-					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
-					//You dont have to though, leave it blank for default.
-					//	'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
-					//Lets leave this as a blank section, no options just some intro text set above.
-					'fields' => array()
-					);
+												array(	
+										'id' => 'home_image3',
+										'type' => 'upload',
+										'title' => __('Home Image Small', 'nhp-opts'), 
+										'sub_desc' => __('Upload your logo to use in the top left of the header. Will replace the Website Title in the header', 'nhp-opts'),
+										'desc' => __('Upload this image at 180x300', 'nhp-opts')
+										),	
 
-		$sections[] = array(
-					'icon' => 'cloud-download',
-					'icon_class' => 'icon-large',
-					'title' => __('Footer', 'nhp-opts'),
-					'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
-					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
-					//You dont have to though, leave it blank for default.
-					//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
-					//Lets leave this as a blank section, no options just some intro text set above.
-					'fields' => array()
+
+	array('id' => 'home_image_link3',
+										'type' => 'text',
+										'title' => __('Home Image Link 3', 'nhp-opts'), 
+										'sub_desc' => __('Upload this image at 320x300', 'nhp-opts'),
+										'desc' => __('Add the link you would like the image to go to', 'nhp-opts')
+										),	
+												)
 					);
 		
 		$sections[] = array(
 					'icon' => 'envelope-alt',
 					'icon_class' => 'icon-small',
-					'title' => __('Contact Info', 'nhp-opts'),
+					'title' => __('Contact Page', 'nhp-opts'),
 					'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
 					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
 					//You dont have to though, leave it blank for default.
@@ -169,42 +166,7 @@
 		 				);
 					
 				
-	$sections[] = array(
-			'icon' => 'adjust',
-		'icon_class' => 'icon-large',
-	 				'title' => __('Styles', 'nhp-opts'),
-	 				'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
-	 				//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
-	 				//You dont have to though, leave it blank for default.
-	 				//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
-	 				//Lets leave this as a blank section, no options just some intro text set above.
-	 				'fields' => array()
-	 				);
-				
-				
-		
-				
-					$sections[] = array(
-						'icon'=> 'th-list',
-								'icon_class' => 'icon-large',
 
-				 				'title' => __('Custom Sidebars', 'nhp-opts'),
-				 				'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
-				 				//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
-				 				//You dont have to though, leave it blank for default.
-				 				//'icon' => trailingslashit(get_template_directory_uri()).'/includes/admin/options-framework/options/img/led-icons/layout_select_sidebar.png',
-				 				//Lets leave this as a blank section, no options just some intro text set above.
-				 				'fields' => array(
-										array(
-										'id' => 'multi_sidebar',
-										'type' => 'multi_text',
-										'title' => __('Add Custom Sidebars', 'nhp-opts'),
-										'sub_desc' => __('Add As Many Extra Sidebars as you need here, then you can select which to use in each page, under the page options', 'nhp-opts'),
-										'desc' => __('Click Add More to add More Sidebar Areas', 'nhp-opts')
-										),
-
-										)//fields
-				 				);
 				
 				
 	return $sections;
