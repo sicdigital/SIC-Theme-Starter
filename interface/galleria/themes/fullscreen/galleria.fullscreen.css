@@ -2,8 +2,7 @@
 
 #galleria-loader{height:1px!important}
 
-html,
-body { background: #000 }
+
 .galleria-container {
     height: 100%;
     overflow: hidden;
