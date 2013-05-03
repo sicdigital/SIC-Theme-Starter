@@ -5,7 +5,9 @@ Template Name: Contact Page Template
 
 get_template_part('header');?>	
 		
-<img width="940" src="<?php echo get_post_meta($post->ID, 'header_image_image', true);?>"/>
+	<header class="page_header">
+		<img width="940" src="<?php echo get_post_meta($post->ID, 'header_image_image', true);?>"/>
+	</header>
 
 	<section class="page_body cf">
 
