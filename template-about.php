@@ -5,6 +5,8 @@ Template Name: About Page Template
 
 get_template_part('header');?>	
 		
+		<img width="940" src="<?php echo get_post_meta($post->ID, 'header_image_image', true);?>"/>
+
 	<section class="page_body">
 
 						

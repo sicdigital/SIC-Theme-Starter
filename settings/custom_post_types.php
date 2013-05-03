@@ -162,3 +162,12 @@ $slider->add_meta_box('Image', array(
 'description' => 'editor',
 
 ));
+
+
+$page = new PostType("Page");
+
+
+$page->add_meta_box('Header Image', array(
+ 'image' => array('croppedImage',3.41),
+));
+
