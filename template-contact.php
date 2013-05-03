@@ -44,7 +44,6 @@ $phone =  get_post_meta($post->ID, 'info_phone', true);
 ?>
 
 
-	</div>
 	<?php endwhile;?>
 
 				<div class="one_half last">
@@ -53,7 +52,7 @@ $phone =  get_post_meta($post->ID, 'info_phone', true);
 
 					<div class="employee cf">
 						<div class="thumb">
-						<img src="http://placehold.it/140x100"/>
+						<img src="<?php echo $image;?>"/>
 						</div>
 						
 						<div class="content">
