@@ -37,7 +37,7 @@ get_template_part('header');?>
 $get_transit = new WP_Query( 'post_type=staff' );
 while ( $get_transit->have_posts() ) : $get_transit->the_post();
 $image =  get_post_meta($post->ID, 'info_image', true);
-$name =  get_post_meta($post->ID, 'info_name', true);
+$name =  get_the_title();
 $title =  get_post_meta($post->ID, 'info_title', true);
 $email =  get_post_meta($post->ID, 'info_email', true);
 $phone =  get_post_meta($post->ID, 'info_phone', true);
