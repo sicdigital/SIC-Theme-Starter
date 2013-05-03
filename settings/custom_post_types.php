@@ -105,7 +105,7 @@ $associations = new PostType("Associations",
 
 
 $associations->add_meta_box('Preview', array(
- 'image' => array('croppedImage',2.93),
+ 'image' => array('croppedImage',2),
 
 ));
 

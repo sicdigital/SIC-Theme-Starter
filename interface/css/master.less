@@ -92,6 +92,7 @@ letter-spacing:2px;
 		    position:relative;
 		    float:left;
 			cursor:pointer;
+			line-height:16px;
 			
 
 			> a  {
@@ -155,7 +156,7 @@ Navigation Drop Downs
 			             width: 150px;
 			            /* padding: 2px 12px; */
 						color:#fff;
-						padding:8px;
+						padding:4px 8px;
 						display:block;
 						font-size:11px;
 						text-transform:uppercase;
@@ -242,7 +243,8 @@ Home Page Slider
 .flex-control-nav {
 
 position: absolute;
-top: 10px;
+top: 20px;
+left:20px;
 height:20px;
 max-width:100px;
 text-align: left;
@@ -250,6 +252,16 @@ text-align: left;
 
 .flex-control-paging li a{
 	background:#686868;
+}
+.flex-control-paging li a {
+width: 10px;
+height: 10px;
+}
+
+.flex-control-nav li {
+margin: 0 3px;
+display: inline-block;
+zoom: 1;
 }
 
 .flex-control-paging li a.flex-active{
@@ -269,7 +281,6 @@ Home Page Boxes
 	height:300px;
 	width:320px;
 	margin-right:20px;
-	background-color:red;
 	position:relative;
 }
 
@@ -280,6 +291,8 @@ Home Page Boxes
 }
 
 .home_item .overlay{
+	font-family:OpenSansCondensedLight;
+	letter-spacing:2px;
 	height:60px;
 	position:absolute;
 	bottom:0px;
@@ -290,6 +303,8 @@ Home Page Boxes
 	padding:5px;
 	text-align:center;
 	text-transform:uppercase;
+	font-size:24px;
+	font-weight:200;
 }
 /*
 Page Templates

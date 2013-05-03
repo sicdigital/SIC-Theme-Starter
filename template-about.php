@@ -9,34 +9,72 @@ get_template_part('header');?>
 
 						
 				<?php while ( have_posts() ) : the_post(); ?>	
-						<h2>Please B Seated</h2>
+				
+					<?php the_content(); ?>	
 
-					<p>Please B Seated We are a different kind of event rental company. We source hard-to-find items that make parties memorable and deliver them with an emphasis on service and reliability. We specialize in rare and exclusive seating, but also offer distinguished china, linens, glassware and more. We have experienced party rental veterans on staff as well as employees who have worked in catering and party planning. You and and your clients can trust that Please B Seated is peerless in the industry. 
-					<span class="purple">So Please B Seated your event is about to begin. </span>
-					<?php the_content(); ?>		
+					<?php endwhile; ?>	
 
 				<hr style="margin:40px 0px;"  />
-
-				<div class="associations cf">
+<div class="associations cf">
 					<h2>Associations</h2>
 
-				<div class="association one_half cf">
+
+
+
+			<?php 
+$get_transit = new WP_Query( 'post_type=associations' );
+$i = 1;
+while ( $get_transit->have_posts() ) : $get_transit->the_post();
+$image =  get_post_meta($post->ID, 'preview_image', true);?>
+
+<?php if($i % 2 == 1){echo "<div class='cf'>";}?>
+							
+		<div class="association one_half <?php if($i % 2 == 1){echo "first";} ?> <?php if($i % 2 == 0){echo "last";} ?>">
+					<div class="thumb">
+						<img width="140" height="70" src="<?php echo $image;?>"/>
+					</div>
+					<div class="content"><?php the_content();?></div>
+
+	</div>
+		
+<?php if($i % 2 == 0 && $i != 1){echo "</div>";}?>
+		<?php $i++;?>
+		
+	<?php endwhile;?>
+
+
+
+				</div><!--associations-->
+			<?php wp_reset_query();?>
+
+
+
+
+		<!-- 		<div class="associations cf">
+					<h2>Associations</h2>
+
+				<div class="association one_half">
 					<div class="thumb">
 						<img src="http://placehold.it/140x70"/>
 					</div>
 					<div class="content">Please B Seated We are a different kind of event rental company.</div>
 				</div>
 				
-				<div class="association one_half last"><div class="thumb">
+				<div class="association one_half last">
+
+					<div class="thumb">
 						<img src="http://placehold.it/140x70"/>
 					</div>
-					<div class="content">Please B Seated We are a different kind of event rental company.</div></div>
+					
+					<div class="content">Please B Seated We are a different kind of event rental company.</div>
 				
-
+				</div><!--associations-->
+				
+			
 		
 
 
-			<?php endwhile; ?>
+			
 
 			 
 		</section><!--page body-->
