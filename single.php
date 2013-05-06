@@ -8,7 +8,7 @@ The purpose of this page is as a fall back for all blog pages.
 
 		<header class="page_header">											
 			<!--INSERT OPTION in page to display or not-->
-						<img src="http://placehold.it/940x120"/>
+						<img width="940" height="120" src="<?php echo sic_option('blog_header');?>"/>
 			
 		</header><!-- .entry-header -->
 		
@@ -29,7 +29,7 @@ The purpose of this page is as a fall back for all blog pages.
 	 								<div class="entry_meta">
 									
 										<?php
-											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>' ),
+											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a>' ),
 												get_permalink(),
 												get_the_date( 'c' ),
 												get_the_date(),

@@ -22,16 +22,17 @@ get_template_part('header');?>
 				
 				<div class="association one_half cf">
 					<div class="thumb">
-						<img src="http://placehold.it/140x220"/>
+						<img width="140" height="220" src="<?php echo sic_option('office_image');?>"/>
 					</div>
 					<div class="content">
 						<h3>Office</h3>
-						<p>Please B Seated We are a </p>
-						<p>Please B Seated We are a </p><br  /><br  />
+						<a href="mailto:<?php echo sic_option('email');?>"><?php echo sic_option('email');?></a>
+						<p><?php echo sic_option('office_address');?></p>
+						<p><?php echo sic_option('office_city');?>, <?php echo sic_option('office_state');?>, <?php echo sic_option('office_zip');?></p><br  /><br  />
 						
 						<h3>Warehouse</h3>
-							<p>Please B Seated We are a </p>
-							<p>Please B Seated We are a </p><br  />
+						<p><?php echo sic_option('warehouse_address');?></p>
+						<p><?php echo sic_option('warehouse_city');?>, <?php echo sic_option('warehouse_state');?>, <?php echo sic_option('warehouse_zip');?></p><br  />
 						</div>
 				</div><!--one_half-->
 

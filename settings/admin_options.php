@@ -28,7 +28,7 @@
     
 	function add_new_section($sections){
 	
- 		$sections = array(); 
+ 	//	$sections = array(); 
 
 	
 		$sections[] = array(
@@ -71,10 +71,10 @@
 		
 
 		$sections[] = array(
-					'icon' => 'cloud-upload',
+					'icon' => 'home',
 					'icon_class' => 'icon-large',
 					'title' => __('Home Page', 'nhp-opts'),
-					'desc' => __('<p class="description">This section is for styling the images and links on the home page, items go from left to right. For managing the home page slider please see the sliders section on the left side. </p>', 'nhp-opts'),
+					'desc' => __('<p class="description">This section is for styling the images and links on the home page, items go from left to right. For managing the home page slider please see the sliders section in the main admin navigation. </p>', 'nhp-opts'),
 					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
 					//You dont have to though, leave it blank for default.
 					//	'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
@@ -145,19 +145,111 @@
 					'icon' => 'envelope-alt',
 					'icon_class' => 'icon-small',
 					'title' => __('Contact Page', 'nhp-opts'),
-					'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
+					'desc' => __('<p class="description">All Information Used in the Contact Page</p>', 'nhp-opts'),
 					//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
 					//You dont have to though, leave it blank for default.
 					//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
 					//Lets leave this as a blank section, no options just some intro text set above.
-					'fields' => array()
+					'fields' => array(
+
+									array(	
+										'id' => 'office_image',
+										'type' => 'upload',
+										'title' => __('Office Image', 'nhp-opts'), 
+										'sub_desc' => __('Upload the image to use on the contact page office thumbnail 140x220', 'nhp-opts'),
+										'desc' => __('Upload this image at 180x300', 'nhp-opts')
+										),	
+
+							array('id' => 'email',
+										'type' => 'text',
+										'title' => __( 'Email Address', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('This is for the email link on the contact page', 'nhp-opts')
+										),	
+							
+							array('id' => 'office_address',
+										'type' => 'text',
+										'title' => __('Office Address', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+							array('id' => 'office_city',
+										'type' => 'text',
+										'title' => __('Office City', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+
+							array('id' => 'office_state',
+										'type' => 'text',
+										'title' => __('Office State', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+							
+							array('id' => 'office_zip',
+										'type' => 'text',
+										'title' => __('Office Zip', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+
+
+							array('id' => 'warehouse_address',
+										'type' => 'text',
+										'title' => __('Warehouse Address', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+							array('id' => 'warehouse_city',
+										'type' => 'text',
+										'title' => __('Warehouse City', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+
+							array('id' => 'warehouse_state',
+										'type' => 'text',
+										'title' => __('Warehouse State', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+							
+							array('id' => 'warehouse_zip',
+										'type' => 'text',
+										'title' => __('Warehouse Zip', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+						)
 					);
+
+		$sections[] = array(
+				'icon' => 'edit',
+				'icon_class' => 'icon-large',
+		 				'title' => __('Blog Page', 'nhp-opts'),
+		 				'desc' => __('<p class="description">Controls for links and copyright information in the footer</p>', 'nhp-opts'),
+		 				//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
+		 				//You dont have to though, leave it blank for default.
+		 				//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
+		 				//Lets leave this as a blank section, no options just some intro text set above.
+		 				'fields' => array(
+										array('id' => 'blog_header',
+										'type' => 'upload',
+										'title' => __('Blog Header Image', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('This controls the Blogs Header 940x120', 'nhp-opts')
+										),
+		 					)//fields
+		 				);
+					
+				
 	
 		$sections[] = array(
 				'icon' => 'twitter-sign',
 			'icon_class' => 'icon-large',
 		 				'title' => __('Social Media', 'nhp-opts'),
-		 				'desc' => __('<p class="description">This is a section created by adding a filter to the sections array, great to allow child themes, to add/remove sections from the options.</p>', 'nhp-opts'),
+		 				'desc' => __('<p class="description">This page has all the controls for the social media buttons in the footer. </p>', 'nhp-opts'),
 		 				//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
 		 				//You dont have to though, leave it blank for default.
 		 				//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
@@ -194,7 +286,45 @@
 		 					)
 		 				);
 					
+						$sections[] = array(
+				'icon' => 'cloud-download',
+				'icon_class' => 'icon-large',
+		 				'title' => __('Footer', 'nhp-opts'),
+		 				'desc' => __('<p class="description">Controls for links and copyright information in the footer</p>', 'nhp-opts'),
+		 				//all the glyphicons are included in the options folder, so you can hook into them, or link to your own custom ones.
+		 				//You dont have to though, leave it blank for default.
+		 				//'icon' => get_bloginfo('template_directory') . '/framework/admin/options-framework/options/img/led-icons/emoticon_grin.png',
+		 				//Lets leave this as a blank section, no options just some intro text set above.
+		 				'fields' => array(
+										array('id' => 'contact_url',
+										'type' => 'pages_select',
+										'title' => __('Contact Page', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('This controls links to the contact page', 'nhp-opts')
+										),
+
+						
+										array('id' => 'copyright',
+										'type' => 'text',
+										'title' => __('Copyright Info', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Copyright information displayed in the footer.', 'nhp-opts')
+										),
+
+		 
+						
+										array('id' => 'legal_info',
+										'type' => 'editor',
+										'title' => __('Legal Info', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('Legal Information displayed when the footer link is clicked. ', 'nhp-opts')
+										),
+
+		 					)//fields
+		 				);
+					
 				
+		
 
 				
 				

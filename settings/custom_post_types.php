@@ -163,6 +163,32 @@ $slider->add_meta_box('Image', array(
 
 ));
 
+$slider = new PostType("CallOuts", 
+
+      array(
+            "label" => 'Call Outs',
+            'singular_name' => 'Call Out',
+            "public" => true,
+            "publicly_queryable" => true,
+            "query_var" => true,
+            "menu_icon" => get_bloginfo('template_directory') . "/framework/admin/images/images.png",
+            "rewrite" => true,
+            "capability_type" => "post",
+            "hierarchical" => false,
+            "menu_position" => null,
+            "supports" => array("title","editor"),
+            'has_archive' => true
+        )
+      );
+
+
+$slider->add_meta_box('Image', array(
+ 'image' => array('croppedImage',2.93),
+'link' => 'text',
+'description' => 'editor',
+
+));
+
 
 $page = new PostType("Page");
 
