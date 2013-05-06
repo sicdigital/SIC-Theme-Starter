@@ -67,10 +67,10 @@
 			 <ul class="drop">
 			 
 			 <?php foreach ($categories as $category) : 
-				$nav_query = new WP_Query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
+				$specialty_query = new WP_Query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
 			
 	     
-		        if ( $nav_query->have_posts() ){ ?>
+		        if ( $specialty_query->have_posts() ){ ?>
 
 						<li><a href="/specialty?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
 					
@@ -95,9 +95,9 @@
 				<ul class="drop">
 				 <?php foreach ($categories as $category) : 
 
-				$nav_query = new WP_Query("post_type=essentials&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
+				$essentials_query = new WP_Query("post_type=essentials&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
 	      
-		        if ( $nav_query->have_posts() ){ ?>
+		        if ( $essentials_query->have_posts() ){ ?>
 
 						<li><a href="/essentials?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
 					

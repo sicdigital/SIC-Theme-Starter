@@ -4,49 +4,79 @@ Template Name: Specialty Items Template
 */
 
 get_template_part('header');?>	
-		
-	<section class="page_body cf">
-		
-		<h1>Event Services</h1>
-	<div class="item_category_wrap cf">
 
 		<?php $categories = get_categories('taxonomy=type&post_type=specialty'); ?>
-		
-		 <ul class="item_categories">
-			 
-			 <?php foreach ($categories as $category) : ?>
+
+	 <?php foreach ($categories as $category) : ?>
 
 				<?php $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
 	      
 		        if ( have_posts() ){ 
 						
 						$available_categories[] = $category->slug;
-						$term = $_GET["type"];
+					}
+				
 
-			    if(!$term){$term = $available_categories[0];}?>
+			  endforeach; 
 
-					<li><a <?php if($term == $category->slug ){echo 'class="active"';}?> href="?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
+				$term = $_GET["type"];
+			    if(!$term){$term = $available_categories[0];
+			    	}
+			  ?>
 
-				<?php } 
 
-			  endforeach; ?>
+
+<?php $wp_query->query("post_type=essentials&taxonomy=type&term=". $term . "&". $catinclude ."&paged=".$paged.'&showposts=1');
+
+	        if ( have_posts() ){?>
+
+	      <div class="call_to_action">  Our Specialty Items Include Our One-of-a-kind items. For more standard fare, please visit our <a href="/essentials?type=<?php echo $term;?>"/>Essential Items</a></div>
+	       
+	        <?php } 
+
+			  wp_reset_query();?>
+
+
+
+		
+	<section class="page_body cf">
+
+
+		
+		<h1>Event Services</h1>
+
+
+
+	<div class="item_category_wrap cf">
+
+		
+		 <ul class="item_categories">
 			 
-			 <?php wp_reset_query(); ?>
-	 	
+		
+<?php 
+foreach ($available_categories as $cat ){ ?>
+
+				<li><a <?php if($term == $category->slug ){echo 'class="active"';}?> href="?type=<?php echo $cat; ?>"><?php echo $cat ?></a></li>	
+
+
+<?php }
+
+
+?>
 	 	</ul>
 
 	</div>
 
 	<hr style="margin-top:20px;padding-bottom:20px"/>
-<div class="specialty_wrap">
+	
+	<div class="specialty_wrap">
 
 
 	<div class="specialty_item featured three_fourth">
+	
 	<a href="#"><img src="http://placehold.it/640x255"></a>
+	
 	</div>
-
-
-
 
 
 		   <?php $wp_query = new WP_Query();
@@ -73,8 +103,10 @@ get_template_part('header');?>
 			<div class="pop_inner">
 			
 			<div class="pop_left">
+				
 				<div class="inner">
 					<h2><?php the_title();?></h2>
+					
 					<?php the_content();?>
 
 
