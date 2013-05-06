@@ -89,7 +89,7 @@ get_template_part('header');?>
 			</div>
 				
 			<div class="pop_right">
-					<img width="540" height="520" src="<?php echo get_post_meta($post->ID, 'pop_up_image', true);?>">
+					<img width="520" height="520" src="<?php echo get_post_meta($post->ID, 'pop_up_image', true);?>">
 			</div>
 			</div><!--innner-->
 				

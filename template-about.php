@@ -18,7 +18,7 @@ get_template_part('header');?>
 					<?php endwhile; ?>	
 
 				<hr style="margin:40px 0px;"  />
-<div class="associations cf">
+					<div class="associations cf">
 					<h2>Associations</h2>
 
 
