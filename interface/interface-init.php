@@ -200,18 +200,21 @@ add_editor_style( 'editor-style.css' );
    add_filter( 'default_content', 'custom_editor_content' );
       function custom_editor_content( $content ) {
          global $current_screen;
-        // if ( $current_screen->post_type == 'essentials') {
+         if ( $current_screen->post_type == 'essentials') {
             $content = '
 
-              <div class="one_half">
-              Columns 1 Content
-              </div>
-              <div class="one_half last">
-              Column 2 Content
-              </div>
+          [one_half]
+          Enter all of your content between these bits of code. This is the first column
+          [/one_half]
+
+
+
+          [one_half_last]
+          This is the secont column
+          [/one_half_last]
 
             ';
-         //}
+         }
          // elseif ( $current_screen->post_type == 'POSTTYPE') {
          //    $content = '
 
@@ -228,5 +231,27 @@ add_editor_style( 'editor-style.css' );
          // }
          return $content;
        }
+
+       function one_half( $atts, $content ) {
+	extract(shortcode_atts(array( 'style' => ''), $atts)); 
+	$html = '<div class="one_half">' . 
+				do_shortcode($content) . '</div>'; 
+	return $html;
+}
+
+add_shortcode('one_half', 'one_half');
+
+
+
+       function one_half_last( $atts, $content ) {
+	extract(shortcode_atts(array( 'style' => ''), $atts)); 
+	$html = '<div class="one_half last">' . 
+				do_shortcode($content) . '</div>'; 
+	return $html;
+}
+
+add_shortcode('one_half_last', 'one_half_last');
+
+
 
 

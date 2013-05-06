@@ -3,8 +3,8 @@
 Index.php
 The purpose of this page is as a fall back for all blog pages. 
 */
-?>
-<?php get_template_part( 'header' ); 	?>
+
+get_template_part( 'header' ); 	?>
 
 		<header class="page_header">											
 			<!--INSERT OPTION in page to display or not-->

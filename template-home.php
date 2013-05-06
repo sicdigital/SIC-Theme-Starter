@@ -29,7 +29,8 @@ get_template_part('header');?>
 		<?php $atts = array( 
 		'id' => 'home_page_slider', 
 		'animation' => 'slide',
-		'controlNav' => TRUE, 
+		'controlNav' => TRUE,
+		'directionNav' => TRUE, 
 	);
 		
 		if($content){$slider = new Slider($content, $atts);

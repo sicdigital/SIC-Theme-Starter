@@ -40,20 +40,70 @@
 
 	<nav id="left_nav" class="upper_nav cf">
 		<ul>
-			<li><a href="/specialty-items">Speciality Items</a>
+			<?php 
+			/************************************************************
+			Specialty Items
+			***********************************************************/?> 
 
+			<li><a href="/specialty">Speciality Items</a>
+			
+			<?php $categories = get_categories('taxonomy=type&post_type=specialty'); ?>
+		
+			 <ul class="drop">
+			 
+			 <?php foreach ($categories as $category) : ?>
+
+				<?php $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
+	      
+		        if ( have_posts() ){ ?>
+
+						<li><a href="/specialty?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
+					
+					 <?php  } ?>
+
+			 <?php endforeach; ?>
+			
+			 <?php wp_reset_query(); ?>
+	 	</ul>
+		
+			</li>
+			
+
+			<?php 
+			/************************************************************
+			Essential Items
+			***********************************************************/?> 
+
+			<li><a href="/essentials">Essential Items</a>
 				<ul class="drop">
-					<li><a href="#">Seating</a></li>
-					<li><a href="#">Furniture</a></li>
-					<li><a href="#">Glassware</a></li>
-					<li><a href="#">Flatware</a></li>
-					<li><a href="#">Flatware</a></li>
-					<li><a href="#">Flatware</a></li>
-					<li><a href="#">Flatware</a></li>
+				 <?php foreach ($categories as $category) : ?>
+
+				<?php $wp_query->query("post_type=essentials&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
+	      
+		        if ( have_posts() ){ ?>
+
+						<li><a href="/essentials?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
+					
+					 <?php  } ?>
+
+			 <?php endforeach; ?>
+			 <?php wp_reset_query(); ?>
 				</ul>
 			</li>
-			<li><a href="/essential-items">Essential Items</a></li>
+			
+
+			<?php 
+			/************************************************************
+			Image Gallery
+			***********************************************************/?> 
 			<li><a target="_blank" href="/image-gallery">Gallery</a></li>
+			
+
+
+			<?php 
+			/************************************************************
+			Blog
+			***********************************************************/?> 
 			<li><a href="/blog">Blog</a></li>
 
 		</ul>

@@ -1,9 +1,16 @@
 <?php
 /*
-Index.php
+Single.php
 The purpose of this page is as a fall back for all blog pages. 
 */
+
+if ( 'essentials' == get_post_type() ){
+	wp_redirect( '/essentials', 301 ); 
+	exit;
+}
 ?>
+
+
 <?php get_template_part( 'header' ); 	?>
 
 		<header class="page_header">											
