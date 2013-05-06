@@ -59,10 +59,7 @@ foreach ($available_categories as $cat ){ ?>
 				<li><a <?php if($term == $category->slug ){echo 'class="active"';}?> href="?type=<?php echo $cat; ?>"><?php echo $cat ?></a></li>	
 
 
-<?php }
-
-
-?>
+<?php } ?>
 	 	</ul>
 
 	</div>
@@ -73,6 +70,24 @@ foreach ($available_categories as $cat ){ ?>
 
 
 	<div class="specialty_item featured three_fourth">
+
+		
+		 <?php $wp_query = new WP_Query();
+
+		
+	        $wp_query->query("post_type=callouts&taxonomy=type&term=". $term . "&". $catinclude ."&paged=".$paged.'&showposts=1'); 
+	       
+
+	        if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+			<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
+
+					<a href="<?php echo get_post_meta($post->ID, 'image_link', true);?>"><img width="540" height="255" src="<?php echo get_post_meta($post->ID, 'image_image', true);?>"></a>
+			
+			<?php edit_post_link(); ?>
+
+			 <?php endwhile; ?>
+
 	
 	<a href="#"><img src="http://placehold.it/640x255"></a>
 	

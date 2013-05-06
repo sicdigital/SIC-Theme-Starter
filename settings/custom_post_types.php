@@ -75,7 +75,7 @@ $specialty->add_meta_box('Pop Up', array(
 add_action('init', 'sic_taxonomy');
 function sic_taxonomy(){
 register_taxonomy('type',
-      array( 'specialty','essentials' ),
+      array( 'specialty','essentials', 'callouts' ),
       array( 'hierarchical' => true,
              'label' => __('Type'),
              'query_var' => 'type',

@@ -37,7 +37,8 @@ get_template_part('header');?>
 				</div><!--one_half-->
 
 <?php wp_reset_query();?>
-		
+						<div class="one_half last">
+
 <?php
 $get_transit = new WP_Query( 'post_type=staff' );
 while ( $get_transit->have_posts() ) : $get_transit->the_post();
@@ -48,14 +49,7 @@ $email =  get_post_meta($post->ID, 'info_email', true);
 $phone =  get_post_meta($post->ID, 'info_phone', true);
 ?>
 
-
-	<?php endwhile;?>
-
-				<div class="one_half last">
-
-
-
-					<div class="employee cf">
+	<div class="employee cf">
 						<div class="thumb">
 						<img src="<?php echo $image;?>"/>
 						</div>
@@ -67,7 +61,12 @@ $phone =  get_post_meta($post->ID, 'info_phone', true);
 							<span class="phone"><?php echo $phone;?></span><br  />						 
 						</div>	
 					</div>
+	<?php endwhile;?>
 
+
+
+
+				
 				
 
 					<!--employee
