@@ -26,6 +26,21 @@
 
 	<?php wp_head();?>
 
+
+	<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("a[rel^='pbs']").prettyPhoto({
+            autoplay_slideshow: false,
+            show_title: true,
+            default_width: 768, //I have tried playing with these values
+            default_height:520, //I have tried playing with these values
+            theme: 'pp_default',
+            overlay_gallery: false,                  
+            social_tools: false
+        });
+    });
+</script>
+
 </head>
 
 
