@@ -42,7 +42,7 @@ get_template_part('header');?>
 
 
 	<div class="specialty_item featured three_fourth">
-	<a href="#"><img src="http://placehold.it/620x255"></a>
+	<a href="#"><img src="http://placehold.it/640x255"></a>
 	</div>
 
 

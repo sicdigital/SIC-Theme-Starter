@@ -176,7 +176,7 @@ $slider = new PostType("CallOuts",
             "capability_type" => "post",
             "hierarchical" => false,
             "menu_position" => null,
-            "supports" => array("title","editor"),
+            "supports" => array("title"),
             'has_archive' => true
         )
       );

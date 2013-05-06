@@ -66,19 +66,21 @@
 		
 			 <ul class="drop">
 			 
-			 <?php foreach ($categories as $category) : ?>
-
-				<?php $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
-	      
-		        if ( have_posts() ){ ?>
+			 <?php foreach ($categories as $category) : 
+				$nav_query = new WP_Query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
+			
+	     
+		        if ( $nav_query->have_posts() ){ ?>
 
 						<li><a href="/specialty?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
 					
 					 <?php  } ?>
 
-			 <?php endforeach; ?>
+			 <?php endforeach; 
+			wp_reset_postdata();
+
+			 ?>
 			
-			 <?php wp_reset_query(); ?>
 	 	</ul>
 		
 			</li>
@@ -91,18 +93,17 @@
 
 			<li><a href="/essentials">Essential Items</a>
 				<ul class="drop">
-				 <?php foreach ($categories as $category) : ?>
+				 <?php foreach ($categories as $category) : 
 
-				<?php $wp_query->query("post_type=essentials&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
+				$nav_query = new WP_Query("post_type=essentials&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1');
 	      
-		        if ( have_posts() ){ ?>
+		        if ( $nav_query->have_posts() ){ ?>
 
 						<li><a href="/essentials?type=<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>	
 					
 					 <?php  } ?>
 
-			 <?php endforeach; ?>
-			 <?php wp_reset_query(); ?>
+			 <?php endforeach;?>
 				</ul>
 			</li>
 			
@@ -143,8 +144,6 @@
 	</nav>
 
 		<?php do_action('header_before_inner');?>
-			
-
 	
 	</header>
 
