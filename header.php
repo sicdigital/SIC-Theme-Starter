@@ -112,7 +112,7 @@
 			/************************************************************
 			Image Gallery
 			***********************************************************/?> 
-			<li><a target="_blank" href="/image-gallery">Gallery</a></li>
+			<li><a href="/image-gallery">Gallery</a></li>
 			
 
 
