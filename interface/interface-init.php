@@ -253,5 +253,18 @@ add_shortcode('one_half', 'one_half');
 add_shortcode('one_half_last', 'one_half_last');
 
 
+function enable_more_buttons($buttons) {
+  $buttons[] = 'hr';
+ 
+  /* 
+  Repeat with any other buttons you want to add, e.g.
+	  $buttons[] = 'fontselect';
+	  $buttons[] = 'sup';
+  */
+ 
+  return $buttons;
+}
+add_filter("mce_buttons", "enable_more_buttons");
+
 
 
