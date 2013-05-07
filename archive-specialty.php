@@ -7,22 +7,18 @@ get_template_part('header');?>
 
 		<?php $categories = get_categories('taxonomy=type&post_type=specialty'); ?>
 
-	 <?php foreach ($categories as $category) : ?>
+		<?php foreach ($categories as $category) : ?>
 
-				<?php $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
+		<?php $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
 	      
-		        if ( have_posts() ){ 
-						
-						$available_categories[] = $category->slug;
-					}
-				
-
-			  endforeach; 
+		        if ( have_posts() ){ $available_categories[] = $category->slug;}
+				endforeach; 
 
 				$term = $_GET["type"];
-			    if(!$term){$term = $available_categories[0];
-			    	}
-			  ?>
+			    
+			    if(!$term){$term = $available_categories[0];}
+			  
+				 ?>
 
 
 
@@ -82,15 +78,21 @@ foreach ($available_categories as $cat ){ ?>
 
 			<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
 
-					<a href="<?php echo get_post_meta($post->ID, 'image_link', true);?>"><img width="540" height="255" src="<?php echo get_post_meta($post->ID, 'image_image', true);?>"></a>
+					<a href="<?php echo get_post_meta($post->ID, 'image_link', true);?>"><img width="640" height="255" src="<?php echo get_post_meta($post->ID, 'image_image', true);?>">
 			
+			<div class="overlay">
+				<div class="triangle"></div>
+				<div class="inner">
+				<h2><?php the_title();?></h2>
+				<p><?php the_content();?></p>
+			</div>
+			</div>
+
+			</a>
 			<?php edit_post_link(); ?>
 
 			 <?php endwhile; ?>
 
-	
-	<a href="#"><img src="http://placehold.it/640x255"></a>
-	
 	</div>
 
 
@@ -126,10 +128,9 @@ foreach ($available_categories as $cat ){ ?>
 
 
 						<div class="contact">
-			<a href="mailto:mike@pleasebesated.com" class="button">Email For Pricing and Availability</a>
-							or call 555.555.5555
-
-			</div>
+						<a href="mailto:mike@pleasebesated.com" class="button">Email For Pricing and Availability</a>
+						or call 555.555.5555
+					</div>
 				</div>
 
 		

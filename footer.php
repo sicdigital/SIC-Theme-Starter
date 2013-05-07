@@ -13,8 +13,9 @@
 </ul>
 
 <div class="copyright">
-	<a href="#legal-info" rel="lb" >LEGAL</a> | <?php echo sic_option('copyright')?>
-	<div id="legal-info" style="display: none;"><?php echo sic_option('legal_info');?></div>
+	<a href="#legal-info" rel="pbs" >LEGAL</a> | <?php echo sic_option('copyright')?>
+	<div id="legal-info" style="display: none;">
+		<div class="legal inner"><?php echo sic_option('legal_info');?></div></div>
 </div><!--copyright-->
 
 </footer>
