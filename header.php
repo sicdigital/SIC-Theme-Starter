@@ -60,7 +60,7 @@
 			Specialty Items
 			***********************************************************/?> 
 
-			<li><a href="/specialty">Speciality Items</a>
+			<li><a class="strong" href="/specialty">Speciality Items</a>
 			
 			<?php $categories = get_categories('taxonomy=type&post_type=specialty'); ?>
 		
@@ -91,7 +91,7 @@
 			Essential Items
 			***********************************************************/?> 
 
-			<li><a href="/essentials">Essential Items</a>
+			<li><a class="strong" href="/essentials">Essential Items</a>
 				<ul class="drop">
 				 <?php foreach ($categories as $category) : 
 
@@ -136,9 +136,9 @@
 			<li><a href="/contact">Contact</a></li>
 		</ul>
 	
-	<form id="header_search" action="#" method="post">
+	<form id="header_search" action="<?php bloginfo('home'); ?>" method="get">
 		<button type="submit"></button>
-		<input type="text" value="" name="EMAIL" class="text" id="" placeholder="search" required="">
+		<input type="text" value="" name="s" class="text" id="" placeholder="search" required="">
 	</form>
 	
 	</nav>

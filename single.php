@@ -8,6 +8,21 @@ if ( 'essentials' == get_post_type() ){
 	wp_redirect( '/essentials', 301 ); 
 	exit;
 }
+
+if ( 'specialty' == get_post_type() ){
+	wp_redirect( '/specialty', 301 ); 
+	exit;
+}
+
+if ( 'associations' == get_post_type() ){
+	wp_redirect( '/about', 301 ); 
+	exit;
+}
+
+if ( 'staff' == get_post_type() ){
+	wp_redirect( '/contact', 301 ); 
+	exit;
+}
 ?>
 
 

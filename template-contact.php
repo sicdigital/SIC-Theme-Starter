@@ -41,6 +41,7 @@ get_template_part('header');?>
 
 <?php
 $get_transit = new WP_Query( 'post_type=staff' );
+
 while ( $get_transit->have_posts() ) : $get_transit->the_post();
 $image =  get_post_meta($post->ID, 'info_image', true);
 $name =  get_the_title();

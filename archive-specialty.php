@@ -56,7 +56,7 @@ get_template_part('header');?>
 <?php 
 foreach ($available_categories as $cat ){ ?>
 
-				<li><a <?php if($term == $category->slug ){echo 'class="active"';}?> href="?type=<?php echo $cat; ?>"><?php echo $cat ?></a></li>	
+				<li><a <?php if($term == $cat ){echo 'class="active"';}?> href="?type=<?php echo $cat; ?>"><?php echo $cat ?></a></li>	
 
 
 <?php } ?>
