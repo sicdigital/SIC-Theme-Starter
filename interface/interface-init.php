@@ -120,6 +120,7 @@ if($slides){
 		'id' => 'page_slider', 
 		'animation' => 'slide',
 		'controlNav' => TRUE, 
+
 	);
 		
 		if($content){$slider = new Slider($content, $atts);
@@ -266,5 +267,13 @@ function enable_more_buttons($buttons) {
 }
 add_filter("mce_buttons", "enable_more_buttons");
 
+
+add_action('admin_head', 'plugin_styles');
+
+function plugin_styles(){
+	echo "<style>#cpt_info_box{display:none}
+
+	</style>";
+}
 
 

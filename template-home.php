@@ -31,6 +31,7 @@ get_template_part('header');?>
 		'animation' => 'slide',
 		'controlNav' => TRUE,
 		'directionNav' => TRUE, 
+		'useCSS' => FALSE 
 	);
 		
 		if($content){$slider = new Slider($content, $atts);
