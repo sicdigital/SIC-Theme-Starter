@@ -85,6 +85,7 @@ if(!is_admin()){
 
 
 	wp_enqueue_script("galleria", get_bloginfo('template_directory') . "/interface/galleria/galleria-1.2.9.min.js", 'jquery' , "1.2.9", FALSE);
+	wp_enqueue_script("galleria-history-js", get_bloginfo('template_directory') . "/interface/galleria/plugins/history/galleria.history.min.js", 'galleria' , "1.2.9", FALSE);
 	wp_enqueue_script("galleria-class-theme", get_bloginfo('template_directory') . "/interface/galleria/themes/fullscreen/galleria.fullscreen.min.js", 'galleria' , "1.2.9", FALSE);
 	wp_enqueue_style("galleria-class-theme", get_bloginfo('template_directory') . "/interface/galleria/themes/fullscreen/galleria.fullscreen.css", 'master' , '' , FALSE);
 

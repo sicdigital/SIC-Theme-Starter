@@ -122,6 +122,10 @@ foreach ($available_categories as $cat ){ ?>
 			<div class="pop_left">
 				
 				<div class="inner">
+					<a class="pop_share" href="mailto:someone@example.com?body=<?php the_permalink();?>"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/share_white.png"/></a>
+					
+				
+
 					<h2><?php the_title();?></h2>
 					
 					<?php the_content();?>
