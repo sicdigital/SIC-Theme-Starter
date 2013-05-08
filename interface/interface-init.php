@@ -236,7 +236,7 @@ add_editor_style( 'editor-style.css' );
 
        function one_half( $atts, $content ) {
 	extract(shortcode_atts(array( 'style' => ''), $atts)); 
-	$html = '<div class="one_half">' . 
+	$html = '<div class="row cf"><div class="one_half">' . 
 				do_shortcode($content) . '</div>'; 
 	return $html;
 }
@@ -248,7 +248,7 @@ add_shortcode('one_half', 'one_half');
        function one_half_last( $atts, $content ) {
 	extract(shortcode_atts(array( 'style' => ''), $atts)); 
 	$html = '<div class="one_half last">' . 
-				do_shortcode($content) . '</div>'; 
+				do_shortcode($content) . '</div></div>'; 
 	return $html;
 }
 
