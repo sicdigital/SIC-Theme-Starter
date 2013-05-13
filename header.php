@@ -129,7 +129,7 @@
 		<a href="/"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/pbs-logo-300x125.png"/></a>
 	</div><!--branding-->
 
-<nav id="left_nav" class="upper_nav cf">
+<nav id="left_nav" class="upper_nav cf mobile-only">
 		<ul>
 			<?php 
 			/************************************************************
