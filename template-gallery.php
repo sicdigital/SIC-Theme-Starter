@@ -38,7 +38,7 @@ display:block;
 position:absolute;
     top:35px;
     right:40px;
-    font-size:12px;
+    font-size:16px;
     z-index: 9999;
 }
     .share{
@@ -71,7 +71,7 @@ position:absolute;
             while ( $get_slider->have_posts() ) : $get_slider->the_post();?>
     
             <?php $image =  get_post_meta($post->ID, 'image_image', true);?>
-            <?php $description = '<h2>' . the_title() . '</h2>' .  get_post_meta($post->ID, 'image_description', true);?>
+            <?php $description = get_post_meta($post->ID, 'image_description', true);?>
             <?php $share_link = get_bloginfo('url') . '/image-gallery/#/' . $x; ?>
       
         <a href="<?php echo $image;?>">
@@ -79,7 +79,7 @@ position:absolute;
                 src="<?php echo $image;?>",
                 data-big="<?php echo $image;?>"
                 data-title="<?php the_title();?>"
-                data-description="<?php echo $description;?>
+                data-description="<?php the_content();?>
 
                 <?php echo "<div class='back alignright' style='margin-top:-20px'><a href='$url'>x</a></div>";?>
                 <?php echo '<div class=\'share alignleft\' style=\'margin-top:-20px\'><a href=\'mailto:someone@example.com?body=' . $share_link  . '\'><img src=\'' . get_bloginfo('stylesheet_directory') . '/interface/images/share.png\'</a></div>';?>"

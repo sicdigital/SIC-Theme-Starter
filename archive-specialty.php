@@ -39,7 +39,7 @@ get_template_part('header');?>
 
 
 		
-		<h1>Event Services</h1>
+		<h1>Specialty Items</h1>
 
 
 
@@ -99,7 +99,7 @@ foreach ($available_categories as $cat ){ ?>
 		   <?php $wp_query = new WP_Query();
 
 		
-	        $wp_query->query("post_type=specialty&taxonomy=type&term=". $term . "&". $catinclude ."&paged=".$paged.'&showposts=20'); 
+	        $wp_query->query("post_type=specialty&taxonomy=type&term=". $term . "&". $catinclude ."&paged=".$paged.'&showposts=-1'); 
 	       
 	       	$i = 0; 
 

@@ -37,7 +37,7 @@ get_template_part('header');?>
 
 <section class="page_body cf">	
 
-<h1>Event Services</h1>
+<h1>Essential Items</h1>
 	
 	<div class="item_category_wrap cf">
 
