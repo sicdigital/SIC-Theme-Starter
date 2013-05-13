@@ -20,7 +20,7 @@ get_template_part('header');?>
 					
 					<br /><br /><br /><!--yikes.-->
 				
-				<div class="association one_half cf">
+				<div class="association office_info one_half cf">
 					<div class="thumb">
 						<img width="140" height="220" src="<?php echo sic_option('office_image');?>"/>
 					</div>
@@ -38,7 +38,7 @@ get_template_part('header');?>
 				</div><!--one_half-->
 
 <?php wp_reset_query();?>
-						<div class="one_half last">
+						<div class="one_half employee_info last">
 
 <?php
 $get_transit = new WP_Query( 'post_type=staff' );
