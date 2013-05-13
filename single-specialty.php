@@ -3,35 +3,49 @@
 Single.php
 The purpose of this page is as a fall back for all blog pages. 
 */
+get_template_part( 'header' ); 	?>
 
-if ( 'essentials' == get_post_type() ){
-	wp_redirect( '/essentials', 301 ); 
-	exit;
-}
+<?php $categories = get_categories('taxonomy=type&post_type=specialty'); ?>
 
-if ( 'associations' == get_post_type() ){
-	wp_redirect( '/about', 301 ); 
-	exit;
-}
+		<?php foreach ($categories as $category) : ?>
 
-if ( 'staff' == get_post_type() ){
-	wp_redirect( '/contact', 301 ); 
-	exit;
-}
-?>
+		<?php
+
+		$the_query = new WP_Query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged."&showposts=-1");
+
+		// $wp_query->query("post_type=specialty&taxonomy=type&term=". $category->slug . "&". $catinclude ."&paged=".$paged."&showposts=-1"); 
+	      
+		        if ( have_posts() ){ $available_categories[] = $category->slug;}
+				endforeach; 
+
+				$term = $_GET["type"];
+			    
+			    
+			  
+				 ?>
 
 
-<?php get_template_part( 'header' ); 	?>
 
-		<header class="page_header">											
-			<!--INSERT OPTION in page to display or not-->
-						<img width="940" height="120" src="<?php echo sic_option('blog_header');?>"/>
-			
-		</header><!-- .entry-header -->
-		
 		<section class="page_body cf">
 
-		<section id="primary_content">
+
+
+	<div class="item_category_wrap cf">
+
+		
+		 <ul class="item_categories">
+			 
+		
+<?php 
+foreach ($available_categories as $cat ){ ?>
+
+				<li><a <?php if($term == $cat ){echo 'class="active"';}?> href="/specialty?type=<?php echo $cat; ?>"><?php echo $cat ?></a></li>	
+
+
+<?php } ?>
+	 	</ul>
+
+	</div>
 			
 			<?php if ( have_posts() ) : ?>	
 			
@@ -45,16 +59,7 @@ if ( 'staff' == get_post_type() ){
 	 								
 	 								<div class="entry_meta">
 									
-										<?php
-											printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a>' ),
-												get_permalink(),
-												get_the_date( 'c' ),
-												get_the_date(),
-												get_author_posts_url( get_the_author_meta( 'ID' ) ),
-												sprintf( esc_attr__( 'View all posts by %s'), get_the_author() ),
-												get_the_author()
-											);
-										?>
+								
 
 										<?php if ( comments_open() ) : comments_popup_link( '', '1 comment', '% comments', 'comments-link', 'Comments are off for this post'); endif;?>		
 									
@@ -65,8 +70,8 @@ if ( 'staff' == get_post_type() ){
 						
 						<div class="entry_image">
 						
-							<?php the_post_thumbnail( 'post_featured'); ?>
-					
+						<img width="520" height="520" src="<?php echo get_post_meta($post->ID, 'pop_up_image', true);?>">					
+						
 						</div><!--entry_image-->
 
 						
@@ -93,19 +98,10 @@ if ( 'staff' == get_post_type() ){
 			
 			<?php endwhile; ?>
 			
-			<?php $index_pages = new sicPagination(); echo $index_pages->output();?>
 		
-		</section><!--primary_content -->
-
-		<?php else : ?>
-
-			<?php echo "Sorry, this article doesnt exist";?>
 
 		<?php endif; ?>
-						
-
-		<?php get_template_part( 'sidebar' ); ?>
-			
+							
 		</section><!--page body-->
 
 		<?php get_template_part( 'footer' ); ?>

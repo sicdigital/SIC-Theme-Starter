@@ -1,0 +1,80 @@
+<?php
+/*
+Single. Specialty php
+The purpose of this page is as a fall back for all blog pages. 
+*/
+get_template_part( 'header' ); 	?>
+
+		<header class="page_header">											
+			<!--INSERT OPTION in page to display or not-->
+						<img width="940" height="120" src="<?php echo sic_option('blog_header');?>"/>
+			
+		</header><!-- .entry-header -->
+		
+		<section class="page_body cf">
+
+		<section id="primary_content">
+			
+			<?php if ( have_posts() ) : ?>	
+			
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+				<div id="pop-up-<?php the_ID();?>" style="display:none;">
+
+			<div class="pop_inner">
+			
+			<div class="pop_left">
+				
+				<div class="inner">
+					<a class="pop_share" href="mailto:someone@example.com?body=<?php the_permalink();?>"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/share_white.png"/></a>
+					
+				
+
+					<h2><?php the_title();?></h2>
+					
+					<?php the_content();?>
+
+
+						<div class="contact">
+						<a href="mailto:info@pleasebesated.com" class="button">Email For Pricing and Availability</a>
+						or call <?php echo sic_option('primary_phone');?>
+					</div>
+				</div>
+
+		
+			</div>
+				
+			<div class="pop_right">
+					<img width="520" height="520" src="<?php echo get_post_meta($post->ID, 'pop_up_image', true);?>">
+			</div>
+			</div><!--innner-->
+				
+			
+
+				</article><!-- #post-<?php the_ID(); ?> -->
+
+	<?php comments_template( '', true ); ?>
+
+							<?php get_template_part( 'pagination' ); ?>
+			
+			<?php endwhile; ?>
+			
+			<?php $index_pages = new sicPagination(); echo $index_pages->output();?>
+		
+		</section><!--primary_content -->
+
+		<?php else : ?>
+
+			<?php echo "Sorry, this article doesnt exist";?>
+
+		<?php endif; ?>
+						
+
+		<?php get_template_part( 'sidebar' ); ?>
+			
+		</section><!--page body-->
+
+		<?php get_template_part( 'footer' ); ?>
+				
