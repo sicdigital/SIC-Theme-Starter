@@ -39,7 +39,8 @@ $essentials = new PostType("Essentials",
             "hierarchical" => false,
             "menu_position" => null,
             "supports" => array("title", 'editor' ),
-            'has_archive' => true
+            'has_archive' => true,
+            'taxonomies' => array('post_tag')
         )
       );
 
@@ -60,7 +61,8 @@ $specialty = new PostType("Specialty",
             "hierarchical" => false,
             "menu_position" => null,
             "supports" => array("title", 'thumbnail' ),
-            'has_archive' => true
+            'has_archive' => true,
+            'taxonomies' => array('post_tag')
         )
       );
 
