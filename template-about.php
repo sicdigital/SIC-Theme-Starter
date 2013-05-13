@@ -19,7 +19,7 @@ get_template_part('header');?>
 
 					<hr style="margin:40px 0px;"  />
 					<div class="associations cf">
-					<h2>Associations</h2>
+					<h2>Community</h2>
 
 
 
@@ -32,15 +32,15 @@ $image =  get_post_meta($post->ID, 'preview_image', true);?>
 
 <?php if($i % 2 == 1){echo "<div class='cf'>";}?>
 							
-		<div class="association one_half <?php if($i % 2 == 1){echo "first";} ?> <?php if($i % 2 == 0){echo "last";} ?>">
+		<div class="association one_third <?php if($i % 3 == 0){echo "last";} ?>">
 					<div class="thumb">
-						<img width="140" height="70" src="<?php echo $image;?>"/>
+						<img width="93" height="55" src="<?php echo $image;?>"/>
 					</div>
 					<div class="content"><?php the_content();?></div>
 
 	</div>
 		
-<?php if($i % 2 == 0 && $i != 1){echo "</div>";}?>
+<?php if($i % 3 == 0 && $i != 1){echo "</div>";}?>
 		<?php $i++;?>
 		
 	<?php endwhile;?>
