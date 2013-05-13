@@ -53,7 +53,7 @@
 	
 	<header id="header" class="cf">
 
-	<nav id="left_nav" class="upper_nav cf">
+	<nav id="left_nav" class="upper_nav cf no-mobile">
 		<ul>
 			<?php 
 			/************************************************************
@@ -129,6 +129,44 @@
 		<a href="/"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/pbs-logo-300x125.png"/></a>
 	</div><!--branding-->
 
+<nav id="left_nav" class="upper_nav cf">
+		<ul>
+			<?php 
+			/************************************************************
+			Specialty Items
+			***********************************************************/?> 
+
+			<li><a class="strong" href="/specialty">Speciality Items</a>
+				
+			</li>
+			
+
+			<?php 
+			/************************************************************
+			Essential Items
+			***********************************************************/?> 
+
+			<li><a class="strong" href="/essentials">Essential Items</a>
+		
+			</li>
+			
+
+			<?php 
+			/************************************************************
+			Image Gallery
+			***********************************************************/?> 
+			<li><a href="/image-gallery">Gallery</a></li>
+			
+
+
+			<?php 
+			/************************************************************
+			Blog
+			***********************************************************/?> 
+			<li><a href="/blog">Blog</a></li>
+
+		</ul>
+	</nav>
 
 	<nav id="right_nav" class="upper_nav cf">
 		<ul>

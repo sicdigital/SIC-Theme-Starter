@@ -20,6 +20,9 @@
 .purple{
 color:#795da4;
 }
+.no-mobile{
+	display:none;
+}
 
 a.strong{
 font-family: OpenSansRegular;
@@ -1112,7 +1115,7 @@ Featured image
 
 
 .mobile-only{
-	display:none !important;
+	display:none;
 }
 
 @media screen and (min-width:1024px){
@@ -1150,7 +1153,7 @@ header#header{
 }
 	.flexslider{display:none;}
 
-}
+
 #branding{
 	float:none;
 	margin:auto;
@@ -1165,7 +1168,9 @@ header#header{
 #right_nav{
 	float:none;
 	margin:auto;
-	margin-top:30px;
+	margin-top:20px;
+	padding-left:0px;
+	width:300px;
 }
 
 .drop{
@@ -1210,9 +1215,10 @@ Soecialty Page
 */
 
 .call_to_action{
-	width:100%;
+	width:95%;
 
 }
+
 
 .specialty_item.featured{
 	display:none;
@@ -1235,6 +1241,12 @@ Soecialty Page
 .page_header{
 	display:none;
 }
+
+.page_body{
+	padding:10px;
+		padding-top:20px;
+
+}
 .page_body h1{
 	text-align:center;
 }
@@ -1246,6 +1258,10 @@ Soecialty Page
 #content_block aside.aside-right{
 	float:none;
 	width:100%;
+}
+.mobile-only{
+	display:block !important;
+}
 }
 /************************************************************************************
 smaller than 560

@@ -110,7 +110,11 @@ foreach ($available_categories as $cat ){ ?>
 
 			<div class="specialty_item one_fourth <?php if ($i%4 == 0) echo 'last';?>">
 			
-			<a rel="pbs[]" href="#pop-up-<?php the_ID();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
+			<a class="no-mobile" rel="pbs[]" href="#pop-up-<?php the_ID();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
+			
+			<span class="overlay"><?php the_title();?></span></a>
+
+			<a class="mobile-only" href="<?php the_permalink();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
 			
 			<span class="overlay"><?php the_title();?></span></a>
 
