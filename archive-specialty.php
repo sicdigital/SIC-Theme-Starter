@@ -132,8 +132,8 @@ foreach ($available_categories as $cat ){ ?>
 
 
 						<div class="contact">
-						<a href="mailto:mike@pleasebesated.com" class="button">Email For Pricing and Availability</a>
-						or call 555.555.5555
+						<a href="mailto:info@pleasebesated.com" class="button">Email For Pricing and Availability</a>
+						or call <?php echo sic_option('primary_phone');?>
 					</div>
 				</div>
 

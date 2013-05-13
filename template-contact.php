@@ -28,8 +28,9 @@ get_template_part('header');?>
 						<h3>Office</h3>
 						<a href="mailto:<?php echo sic_option('email');?>"><?php echo sic_option('email');?></a>
 						<p><?php echo sic_option('office_address');?></p>
-						<p><?php echo sic_option('office_city');?>, <?php echo sic_option('office_state');?>, <?php echo sic_option('office_zip');?></p><br  /><br  />
-						
+						<p><?php echo sic_option('office_city');?>, <?php echo sic_option('office_state');?>, <?php echo sic_option('office_zip');?></p><br  />
+						<?php echo sic_option('primary_phone');?><br  />
+						<?php echo sic_option('secondary_phone');?><br  /><br  />
 						<h3>Warehouse</h3>
 						<p><?php echo sic_option('warehouse_address');?></p>
 						<p><?php echo sic_option('warehouse_city');?>, <?php echo sic_option('warehouse_state');?>, <?php echo sic_option('warehouse_zip');?></p><br  />

@@ -194,6 +194,18 @@
 										'desc' => __('', 'nhp-opts')
 										),	
 
+							array('id' => 'primary_phone',
+										'type' => 'text',
+										'title' => __('Primary Phone', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
+							array('id' => 'secondary_phone',
+										'type' => 'text',
+										'title' => __('Secondary Phone', 'nhp-opts'), 
+										'sub_desc' => __('', 'nhp-opts'),
+										'desc' => __('', 'nhp-opts')
+										),	
 
 							array('id' => 'warehouse_address',
 										'type' => 'text',
