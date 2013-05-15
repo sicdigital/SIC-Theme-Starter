@@ -78,6 +78,17 @@ foreach ($available_categories as $cat ){ ?>
 						<div class="entry_content">
 						
 							<?php the_content(); ?>
+
+<br  /><a  style="position:relative; background:#795DA4; top:0px;left:0px; padding:10px 10px 0px;" class="pop_share" href="mailto:someone@example.com?body=<?php the_permalink();?>"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/share_white.png"/></a>
+						<div class="contact">
+						<a href="mailto:info@pleasebesated.com" class="button">Email For Pricing and Availability</a><br  />
+						or call <br  /><a class="phone" href="tel:<?php echo $clickable_phone;?>"><?php echo sic_option('primary_phone');?></a>
+	
+						<?php $clickable_phone = preg_replace("/[^A-Za-z0-9]/","", sic_option('primary_phone'));?>
+
+
+
+					</div>
 						
 							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span class="page-link-meta">' . __( 'Pages:') . '</span>', 'after' => '</div>', 'next_or_number' => 'number' ) ); ?>
 						
