@@ -82,7 +82,7 @@ position:absolute;
                 data-description="<?php the_content();?>
 
                 <?php echo "<div class='back alignright' style='margin-top:-20px'><a href='$url'>x</a></div>";?>
-                <?php echo '<div class=\'share alignleft\' style=\'margin-top:-20px\'><a href=\'mailto:someone@example.com?body=' . $share_link  . '\'><img src=\'' . get_bloginfo('stylesheet_directory') . '/interface/images/share.png\'</a></div>';?>"
+                <?php echo '<div class=\'share alignleft\' style=\'margin-top:-20px\'><a href=\'mailto:?body=' . $share_link  . '\'><img src=\'' . get_bloginfo('stylesheet_directory') . '/interface/images/share.png\'</a></div>';?>"
   </a>
 
                     
