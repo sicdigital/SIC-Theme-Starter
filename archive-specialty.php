@@ -136,7 +136,7 @@ foreach ($available_categories as $cat ){ ?>
 
 
 						<div class="contact">
-						<a href="mailto:info@pleasebesated.com" class="button">Email For Pricing and Availability</a>
+						<a href="mailto:info@pleasebseated.com" class="button">Email For Pricing and Availability</a>
 						or call <br  /><br  /><a class="phone" href="tel:<?php echo $clickable_phone;?>"><?php echo sic_option('primary_phone');?></a>
 	
 						<?php $clickable_phone = preg_replace("/[^A-Za-z0-9]/","", sic_option('primary_phone'));?>
