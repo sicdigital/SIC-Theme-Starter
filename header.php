@@ -4,7 +4,7 @@
 
 <head>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, max-zoom=1">
 	
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
@@ -38,7 +38,26 @@
             overlay_gallery: false,                  
             social_tools: false
         });
+        setNavigation();
+
     });
+
+
+function setNavigation() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+
+    jQuery(".upper_nav li a").each(function () {
+        var href = jQuery(this).attr('href');
+
+
+        if (path.substring(0, href.length) === href) {
+            jQuery(this).closest('li').addClass('active');
+        }
+    });
+}
 </script>
 
 </head>
