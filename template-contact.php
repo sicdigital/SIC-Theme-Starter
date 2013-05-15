@@ -52,6 +52,7 @@ $title =  get_post_meta($post->ID, 'info_title', true);
 $email =  get_post_meta($post->ID, 'info_email', true);
 $phone =  get_post_meta($post->ID, 'info_phone', true);
 ?>
+		<div class="inner">
 
 	<div class="employee cf">
 						<div class="thumb">
@@ -64,6 +65,8 @@ $phone =  get_post_meta($post->ID, 'info_phone', true);
 							<a class="email" href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br  />						  
 							<span class="phone"><?php echo $phone;?></span><br  />						 
 						</div>	
+						</div><!--inner-->
+
 					</div>
 	<?php endwhile;?>
 
