@@ -1155,20 +1155,54 @@ Featured image
 /************************************************************************************
 smaller than 768
 *************************************************************************************/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+
+#left_nav, #right_nav{
+	width:95%;
+}
+
+
+
+.upper_nav>ul{
+	width:100%;
+	float:none;
+}
+
+.upper_nav>ul>li{
+	float:none;
+}
+
+#right_nav{
+	margin-top:0px !important;
+	width:95%;
+}
+#left_nav.upper_nav>ul>li>a, #right_nav.upper_nav>ul>li>a{
+	width:100% !important;
+	max-width:inherit;
+	border-bottom:1px solid #efefef;
+}
+
+#header_search input[type='text']{
+	width:95%;
+}
+
+#header_search{
+	width:100%;
+	margin-top:20px;
+}
 .association.one_third{
 width:100%;
 margin-bottom:20px;
 }
 .association .thumb {
 float: left;
-margin-right: 20px;
-width: 26%;
+margin-right: 3%;
+width: 24%;
 }
 
 .association .content {
 float: left;
-width: 74%;
+width: 73%;
 }
 	.body_container{
 		width:100% !important;
@@ -1197,7 +1231,7 @@ header#header{
 	margin:auto;
 	margin-top:20px;
 	padding-left:0px;
-	width:300px;
+	/*width:300px;*/
 }
 
 .drop{
@@ -1244,6 +1278,7 @@ Soecialty Page
 
 .call_to_action{
 	width:95%;
+	margin-bottom:20px;
 
 }
 
@@ -1271,6 +1306,7 @@ Soecialty Page
 }
 
 .page_body{
+	margin-top:0px;
 	padding:10px;
 		padding-top:20px;
 
