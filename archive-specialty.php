@@ -107,12 +107,13 @@ foreach ($available_categories as $cat ){ ?>
 
 			<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
 
-
+	
+			
 			<div class="specialty_item one_fourth <?php if ($i%4 == 0) echo 'last';?>">
 			
 			<a class="no-mobile" rel="pbs[]" href="#pop-up-<?php the_ID();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
 			
-			<span class="overlay"><?php the_title();?></span></a>
+			<span class="overlay"><div class="inner"><?php the_title();?></div></span></a>
 
 			<a class="mobile-only" href="<?php the_permalink();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
 			
@@ -124,11 +125,11 @@ foreach ($available_categories as $cat ){ ?>
 			<div class="pop_inner">
 			
 			<div class="pop_left">
-				
+	
 				<div class="inner">
-					<a class="pop_share" href="mailto:someone@example.com?body=<?php the_permalink();?>"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/share_white.png"/></a>
-					
-				
+					<a class="pop_share" href="mailto:?body=<?php the_permalink();?>"><img src="<?php bloginfo('stylesheet_directory');?>/interface/images/share_white.png"/></a>
+					<a class="pop_link"  style="color:#fff;position:absolute;top:15px;left:192px;font-size:12px;color:#efefef;font-style:italic;font-weight:200" href="#" onclick="window.prompt('Press CTRL+C, then ENTER', '<?php the_permalink();?>'); return false;">Copy Link</a>
+		
 
 					<h2><?php the_title();?></h2>
 					

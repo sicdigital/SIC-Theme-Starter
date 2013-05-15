@@ -703,7 +703,7 @@ display:table;
 	border-bottom:1px solid #fff;
 	font-family:serif;
 	font-style:italic;
-	line-height:22px;
+	line-height:10px;
 		text-transform:none	;
 
 }
@@ -735,11 +735,12 @@ margin-top:-20px;
 	opacity: .8;
 	z-index:2;
 	background-color:#d9d9d9;
-	display:block;
+	display:table;
 	text-align:center;
 	width:200px;
 	height:35px;
-	line-height:35px;
+	line-height:15px;
+	font-size:13px;
 	position:absolute;
 	bottom:0px;
 	color:#78797b;
@@ -749,6 +750,11 @@ margin-top:-20px;
 .specialty_item:hover .overlay{
 	background-color:#795da4;
 	color:#fff;
+}
+
+.specialty_item .inner{
+	display:table-cell;
+	vertical-align: middle;
 }
 
 .pop_share{
@@ -787,6 +793,7 @@ a.pop_share:hover{
 	height:520px;
 display:table;
 
+
 -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
 }
 
@@ -815,11 +822,16 @@ display:table;
 	display:none;
 }
 
+.pop_left .inner p{
+	font-size:12px;
+line-height:17px;
+}
+
 .pop_left .inner{
 	display:table-cell;
 	vertical-align: middle;
 	
-	padding:10px;
+	padding:0px 10px 10px;
 	
 }
 
