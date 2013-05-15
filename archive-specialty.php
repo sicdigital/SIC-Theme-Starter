@@ -117,9 +117,8 @@ foreach ($available_categories as $cat ){ ?>
 
 			<a class="mobile-only" href="<?php the_permalink();?>"><img width="200" height="255" src="<?php echo $large_image_url[0];?>">
 			
-			<span class="overlay"><?php the_title();?></span></a>
+			<span class="overlay"><div class="inner"><?php the_title();?></div></span></a>
 
-			
 			<div id="pop-up-<?php the_ID();?>" style="display:none;">
 
 			<div class="pop_inner">

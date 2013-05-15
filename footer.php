@@ -13,10 +13,12 @@
 </ul>
 
 <div class="copyright">
-	<a href="#legal-info" rel="pbs" >LEGAL</a> | <?php echo sic_option('copyright')?>
+		<a class="no-mobile" href="#legal-info" rel="pbs" >LEGAL</a><a class="mobile-only" href="/legal">LEGAL</a> | <?php echo sic_option('copyright')?>
+
 	<div id="legal-info" style="display: none;">
 		<div class="legal inner"><?php echo sic_option('legal_info');?></div></div>
 </div><!--copyright-->
+
 
 </footer>
 </div><!--end body_wrap-->

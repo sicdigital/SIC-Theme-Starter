@@ -20,7 +20,8 @@ get_template_part('header');?>
 					
 					<br /><br /><br /><!--yikes.-->
 				
-				<div class="association office_info one_half cf">
+				<div class="office_info one_half cf">
+					<div class="inner">
 					<div class="thumb">
 						<img width="140" height="220" src="<?php echo sic_option('office_image');?>"/>
 					</div>
@@ -35,6 +36,7 @@ get_template_part('header');?>
 						<p><?php echo sic_option('warehouse_address');?></p>
 						<p><?php echo sic_option('warehouse_city');?>, <?php echo sic_option('warehouse_state');?>, <?php echo sic_option('warehouse_zip');?></p><br  />
 						</div>
+					</div><!--inner-->
 				</div><!--one_half-->
 
 <?php wp_reset_query();?>
