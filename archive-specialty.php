@@ -26,7 +26,7 @@ get_template_part('header');?>
 
 	        if ( have_posts() ){?>
 
-	      <div class="call_to_action">  Our Specialty Items Include Our One-of-a-kind items. <br  />For more standard fare, please visit our <a href="/essentials?type=<?php echo $term;?>"/>Essential Items</a></div>
+	      <div class="call_to_action">  Our Specialty Items Include Our one-of-a-kind items. <br  />For more standard fare, please visit our <a href="/essentials?type=<?php echo $term;?>"/>Essential Items</a></div>
 	       
 	        <?php } 
 
@@ -137,7 +137,12 @@ foreach ($available_categories as $cat ){ ?>
 
 						<div class="contact">
 						<a href="mailto:info@pleasebesated.com" class="button">Email For Pricing and Availability</a>
-						or call <?php echo sic_option('primary_phone');?>
+						or call <br  /><br  /><a class="phone" href="tel:<?php echo $clickable_phone;?>"><?php echo sic_option('primary_phone');?></a>
+	
+						<?php $clickable_phone = preg_replace("/[^A-Za-z0-9]/","", sic_option('primary_phone'));?>
+
+
+
 					</div>
 				</div>
 

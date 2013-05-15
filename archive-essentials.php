@@ -26,7 +26,7 @@ get_template_part('header');?>
 
 	        if ( have_posts() ){?>
 
-	      <div class="call_to_action">  Our Essential Items Include Our More Standard Fare.<br  /> For one of a kind items please visit our <a href="/specialty?type=<?php echo $term;?>"/>Specialty Items</a></div>
+	      <div class="call_to_action">  Our Essential Items Include Our More Standard Fare.<br  /> For one-of-a-kind items please visit our <a href="/specialty?type=<?php echo $term;?>"/>Specialty Items</a></div>
 	       
 	        <?php } 
 

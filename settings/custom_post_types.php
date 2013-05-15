@@ -90,8 +90,8 @@ register_taxonomy('type',
 $associations = new PostType("Associations", 
 
       array(
-            "label" => 'Associations',
-            'singular_name' => 'Association',
+            "label" => 'Community',
+            'singular_name' => 'Community',
             "public" => true,
             "publicly_queryable" => true,
             "query_var" => true,
