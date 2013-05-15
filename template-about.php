@@ -30,7 +30,7 @@ $i = 1;
 while ( $get_transit->have_posts() ) : $get_transit->the_post();
 $image =  get_post_meta($post->ID, 'preview_image', true);?>
 
-<?php if($i % 2 == 1){echo "<div class='cf'>";}?>
+<?php if($i % 2 == 1){echo "<div class='inner cf'>";}?>
 							
 		<div class="association one_third <?php if($i % 3 == 0){echo "last";} ?>">
 					<div class="thumb">
